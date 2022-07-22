@@ -1,7 +1,7 @@
 body {
     margin-top: 20px;
     color: #bcd0f7;
-    background: #1A233A;
+    
 }
 
 .account-settings .user-profile {
@@ -59,4 +59,8 @@ body {
 
 .list-group-item {
     background: #272E48;
+}
+
+.dark-mode {
+    background: #1A233A;
 }
