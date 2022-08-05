@@ -53,6 +53,9 @@ body {
     border-radius: 5px;
     border: 0;
     margin-bottom: 1rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 }
 
 .form-control {
@@ -84,9 +87,23 @@ body {
     .dark-mode .nav-link {
         color: #fafafa !important;
     }
+
     .dark-mode .navbar {
         --bs-bg-opacity: 1;
         background-color: #272E48;
         color: #fafafa !important;
     }
 
+    .dark-mode .accordion-button:not(.collapsed) {
+        background-color: #1A233A;
+    }
+
+    .dark-mode .accordion-button {
+        background-color: #1A233A;
+        color: #fafafa !important;
+    }
+
+
+    .dark-mode .accordion-body {
+        background-color: #272E48;
+    }
