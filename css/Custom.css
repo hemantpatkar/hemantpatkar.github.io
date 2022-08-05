@@ -1,7 +1,15 @@
 body {
     margin-top: 20px;
-    color: #bcd0f7;
-    
+    color: #273568;
+}
+
+.bgnavbar {
+    --bs-bg-opacity: 1;
+    background-color: #fafafa;
+}
+
+.navbar {
+    color: #273568 !important;
 }
 
 .account-settings .user-profile {
@@ -39,7 +47,7 @@ body {
 }
 
 .card {
-    background: #272E48;
+    background: #fafafa;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -58,9 +66,27 @@ body {
 }
 
 .list-group-item {
-    background: #272E48;
 }
 
 .dark-mode {
     background: #1A233A;
+    color: #fafafa;
 }
+
+    .dark-mode .card {
+        background: #272E48;
+    }
+
+    .dark-mode .list-group-item {
+        background: #272E48;
+    }
+
+    .dark-mode .nav-link {
+        color: #fafafa !important;
+    }
+    .dark-mode .navbar {
+        --bs-bg-opacity: 1;
+        background-color: #272E48;
+        color: #fafafa !important;
+    }
+
