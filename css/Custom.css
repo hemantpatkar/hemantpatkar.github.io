@@ -19,6 +19,10 @@ body {
     color: #273568 !important;
 }
 
+.progress-bar {
+    background-color: #2f3b5a !important;
+}
+
 .account-settings .user-profile {
     margin: 0 0 1rem 0;
     padding-bottom: 1rem;
