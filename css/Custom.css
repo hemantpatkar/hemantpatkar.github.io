@@ -1,6 +1,6 @@
 body {
     margin-top: 20px;
-    color: #273568;
+    color: var(--color-canvas-text);
     background-color: #f2f7f8;
 }
 
@@ -16,8 +16,16 @@ body {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
+.container {
+    max-width: 1200px;
+}
+
+a {
+    color: var(--color-canvas-text);
+}
+
 .navbar {
-    color: #273568 !important;
+    color: var(--color-canvas-text) !important;
 }
 
 .progress-bar {
@@ -79,7 +87,10 @@ body {
     background: #1A233A;
     color: #bcd0f7;
 }
-
+.text-indent {
+    text-indent: 90px;
+    text-align:justify;
+}
 .accordion-button:not(.collapsed) {
     color: #fafafa;
     background-color: #2f3b5a !important;
@@ -90,21 +101,23 @@ body {
 }
 
 .dark-mode {
-    background: #1A233A;
-    color: #fafafa;
+    background: var(--color-canvas-background);
+    color: #cecece;
 }
 
     .dark-mode .card {
-        background: #272E48;
-    }
-
-    .dark-mode .list-group-item {
-        background: #272E48;
+        background: var(--color-canvas-default);
     }
 
     .dark-mode .nav-link {
         color: #fafafa !important;
     }
+
+
+    .dark-mode .list-group-item {
+        background: #272E48;
+    }
+
 
     .dark-mode .navbar {
         --bs-bg-opacity: 1;
@@ -112,16 +125,27 @@ body {
         color: #fafafa !important;
     }
 
-    .dark-mode .accordion-button:not(.collapsed) {
-        background-color: #1A233A;
-    }
-
-    .dark-mode .accordion-button {
-        background-color: #1A233A;
-        color: #fafafa !important;
-    }
-
-
     .dark-mode .accordion-body {
-        background-color: #272E48;
+        background-color: #010409e7;
     }
+
+    .dark-mode .accordion-button:not(.collapsed) {
+        color: #fafafa;
+        background-color: var(--color-canvas-background) !important;
+        box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    }
+
+    .dark-mode .accordion-item {
+        border: 1px #010409;
+    }
+
+    .dark-mode a {
+        color: #dbdbdb;
+    }
+
+
+:root {
+    --color-canvas-background: #010409;
+    --color-canvas-default: #0d1117;
+    --color-canvas-text: #273568;
+}
