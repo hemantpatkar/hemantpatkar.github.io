@@ -324,6 +324,12 @@ a[download] b {
     white-space: nowrap;
 }
 
+/* The date is the only auto-margin, so it snaps to the right and lines up
+   across rows. Give the chevron a fixed gap instead of its default auto. */
+#experienceAccordion .accordion-button::after {
+    margin-left: 0.75rem;
+}
+
 .accordion-button:not(.collapsed) .exp-role,
 .accordion-button:not(.collapsed) .exp-period {
     color: rgba(255, 255, 255, 0.82);
