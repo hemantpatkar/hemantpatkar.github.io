@@ -4,9 +4,11 @@
   points:
     - "[Add a few highlights of your work at Accion Labs.]"
 - company: Encora
+  role: Technical Lead
   period: July 2024 - March 2025
   points:
-    - "[Add your role and a few highlights of your work at Encora.]"
+    - Led development of a healthcare product built on the .NET stack.
+    - Provided technical direction and mentoring to the engineering team as Technical Lead.
 - company: Capgemini
   role: Application Architect (Manager)
   period: March 2021 - June 2024
