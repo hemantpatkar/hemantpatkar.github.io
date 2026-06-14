@@ -1,5 +1,5 @@
 /* Simple offline cache for the portfolio. Bump CACHE to invalidate. */
-var CACHE = "hp-site-v2";
+var CACHE = "hp-site-v3";
 var CORE = [
     "/",
     "/css/bootstrap.min.css",
@@ -50,15 +50,16 @@ self.addEventListener("fetch", function (e) {
         return;
     }
 
-    // Cache-first for static assets.
+    // Stale-while-revalidate for static assets: serve cache fast, refresh in
+    // the background so edits (CSS/JS) show up on the next load.
     e.respondWith(
-        caches.match(req).then(function (cached) {
-            return cached || fetch(req).then(function (res) {
-                if (res && res.ok && res.type === "basic") {
-                    var copy = res.clone();
-                    caches.open(CACHE).then(function (c) { c.put(req, copy); });
-                }
-                return res;
+        caches.open(CACHE).then(function (cache) {
+            return cache.match(req).then(function (cached) {
+                var network = fetch(req).then(function (res) {
+                    if (res && res.ok && res.type === "basic") cache.put(req, res.clone());
+                    return res;
+                }).catch(function () { return cached; });
+                return cached || network;
             });
         })
     );
