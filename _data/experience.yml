@@ -6,6 +6,7 @@
     - Designed a background worker process to synchronise data between the application and SAP.
     - Drove delivery on Azure DevOps — managing work items and shipping through CI/CD pipelines.
 - company: Ingram Micro
+  role: Senior Software Engineer
   period: Nov 2016 - March 2021
   points:
     - Implemented enterprise single sign-on for e-commerce and mobile using Okta with OpenID Connect (OIDC).
@@ -14,6 +15,7 @@
     - Built the Cisco Vendor Portal on an MVC n-layer architecture with supporting APIs.
     - Practised agile delivery with Jira across all projects.
 - company: BigSun Technologies
+  role: Team Lead
   period: Nov 2012 - March 2016
   points:
     - Built a warehousing system with integrated financials (C#.NET and SQL).
