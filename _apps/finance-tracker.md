@@ -5,7 +5,7 @@ tagline: A simple, private way to track your money and reach your financial goal
 status: coming-soon
 icon: fa-wallet
 accent: "#16a34a"
-order: 1
+order: 2
 featured: true
 screenshot: /assets/img/app-placeholder.svg
 description: A personal finance tracker to manage income, expenses, budgets, and goals.

@@ -5,7 +5,7 @@ tagline: An AI automation agent that runs entirely on your machine — private b
 status: beta
 icon: fa-robot
 accent: "#7c3aed"
-order: 3
+order: 4
 featured: true
 screenshot: /assets/img/app-placeholder.svg
 description: A locally-run AI automation agent that automates tasks without sending your data to the cloud.

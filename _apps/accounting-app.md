@@ -5,7 +5,7 @@ tagline: Accounting that does the heavy lifting — invoicing, ledgers, and repo
 status: coming-soon
 icon: fa-file-invoice-dollar
 accent: "#2563eb"
-order: 2
+order: 3
 featured: true
 screenshot: /assets/img/app-placeholder.svg
 description: A general accounting application for invoicing, bookkeeping, and financial reporting.
