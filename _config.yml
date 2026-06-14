@@ -58,12 +58,6 @@ feed:
 
 # Files/folders that should not be copied into the built site.
 exclude:
-  - dotnet
-  - less
-  - scss
-  - sprites
-  - svgs
-  - metadata
   - Gemfile
   - Gemfile.lock
   - README.md
