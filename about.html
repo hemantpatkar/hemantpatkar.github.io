@@ -98,7 +98,7 @@ description: The background, skills, and experience of Hemant Patkar — full st
                             <button class="accordion-button{% unless forloop.first %} collapsed{% endunless %}" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#exp-c{{ forloop.index }}"
                                     aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="exp-c{{ forloop.index }}">
-                                {{ job.company }}&nbsp;<span class="exp-period">{{ job.period }}</span>
+                                <span class="exp-company">{{ job.company }}</span>{% if job.role %}<span class="exp-role">&mdash; {{ job.role }}</span>{% endif %}<span class="exp-period">{{ job.period }}</span>
                             </button>
                         </h2>
                         <div id="exp-c{{ forloop.index }}" class="accordion-collapse collapse{% if forloop.first %} show{% endif %}" aria-labelledby="exp-h{{ forloop.index }}">

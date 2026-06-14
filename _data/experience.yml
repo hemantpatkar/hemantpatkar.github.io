@@ -1,4 +1,5 @@
 - company: Capgemini
+  role: Solution Architect
   period: March 2021 - Present
   points:
     - Built a total talent-management platform on a microservices architecture in .NET Core and Angular, deployed to Google Cloud.

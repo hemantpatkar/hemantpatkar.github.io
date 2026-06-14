@@ -305,12 +305,26 @@ a[download] b {
 }
 
 /* --------------------------- Experience period --------------------------- */
+.exp-company {
+    font-weight: 600;
+}
+
+.exp-role {
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 0.4rem;
+}
+
 .exp-period {
+    margin-left: auto;
+    padding-left: 0.75rem;
     font-weight: 400;
     font-size: 0.78rem;
     color: var(--text-muted);
+    white-space: nowrap;
 }
 
+.accordion-button:not(.collapsed) .exp-role,
 .accordion-button:not(.collapsed) .exp-period {
     color: rgba(255, 255, 255, 0.82);
 }
