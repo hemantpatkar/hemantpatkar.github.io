@@ -1,15 +1,16 @@
 name: Hemant Patkar
-title: Scrum Certified Full Stack Developer
+title: Scrum-Certified Full Stack Developer
 avatar: /assets/img/avatar.jpg
 email: hemantpatkar.hsp@gmail.com
-birthday: 27th July 1987
 phone: "+918082109966"
 location: Mumbai 421301
 objective: >-
-  An MCA postgraduate having 10 years of experience in multiple domains. Seeking a
-  position to utilize my abilities and skills in the Information Technology Industry that
-  offers me professional growth and challenging work environment while being resourceful,
-  innovative and flexible.
+  Full-stack developer with 10+ years building enterprise software across e-commerce,
+  ERP, and talent management — from microservices and enterprise SSO to cloud-native
+  apps on Azure and Google Cloud. I turn complex requirements into reliable,
+  well-architected systems in .NET Core, C#, and Angular, and I bring the same craft to
+  the products I build myself. I care about clean architecture, pragmatic delivery, and
+  software that holds up in production.
 socials:
   - name: GitHub
     icon: fa-github
