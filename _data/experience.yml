@@ -1,6 +1,15 @@
+- company: Accion Labs
+  role: Solution Architect
+  period: March 2025 - Present
+  points:
+    - "[Add a few highlights of your work at Accion Labs.]"
+- company: Encora
+  period: July 2024 - March 2025
+  points:
+    - "[Add your role and a few highlights of your work at Encora.]"
 - company: Capgemini
   role: Solution Architect
-  period: March 2021 - Present
+  period: March 2021 - June 2024
   points:
     - Built a total talent-management platform on a microservices architecture in .NET Core and Angular, deployed to Google Cloud.
     - Designed a background worker process to synchronise data between the application and SAP.
