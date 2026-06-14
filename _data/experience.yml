@@ -8,7 +8,7 @@
   points:
     - "[Add your role and a few highlights of your work at Encora.]"
 - company: Capgemini
-  role: Solution Architect
+  role: Application Architect (Manager)
   period: March 2021 - June 2024
   points:
     - Built a total talent-management platform on a microservices architecture in .NET Core and Angular, deployed to Google Cloud.
