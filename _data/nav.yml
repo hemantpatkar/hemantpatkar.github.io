@@ -1,0 +1,14 @@
+# Primary navigation. `cta: true` renders as the highlighted button.
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Services
+  url: /services/
+- title: Apps
+  url: /apps/
+- title: Blog
+  url: /blog/
+- title: Contact
+  url: /contact/
+  cta: true

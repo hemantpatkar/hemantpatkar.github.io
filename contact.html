@@ -1,0 +1,49 @@
+---
+layout: page
+title: Contact
+subtitle: Have a project, a question, or just want to say hello? Let's talk.
+permalink: /contact/
+description: Get in touch with Hemant Patkar for consulting, custom software development, or collaboration.
+---
+{% assign p = site.data.profile %}
+<div class="contact-grid">
+
+    <div class="contact-form-wrap reveal">
+        <form id="contact-form" novalidate>
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New message from your portfolio site">
+            <input type="hidden" name="from_name" value="Portfolio Contact">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="mb-3">
+                <label class="form-label" for="cf-name">Name</label>
+                <input class="form-control" id="cf-name" type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="cf-email">Email</label>
+                <input class="form-control" id="cf-email" type="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="cf-msg">Message</label>
+                <textarea class="form-control" id="cf-msg" name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button class="btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+
+    <aside class="contact-aside reveal">
+        <h3>Other ways to reach me</h3>
+        <ul class="contact-methods">
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:{{ p.phone }}">{{ p.phone }}</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> {{ p.location }}</li>
+        </ul>
+        <h3 class="mt-4">Connect</h3>
+        <div class="social-links">
+            {% for s in p.socials %}
+            <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>
+            {% endfor %}
+        </div>
+    </aside>
+
+</div>

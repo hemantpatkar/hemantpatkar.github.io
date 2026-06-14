@@ -1,5 +1,5 @@
 /* Simple offline cache for the portfolio. Bump CACHE to invalidate. */
-var CACHE = "hp-site-v1";
+var CACHE = "hp-site-v2";
 var CORE = [
     "/",
     "/css/bootstrap.min.css",

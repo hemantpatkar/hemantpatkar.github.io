@@ -1,0 +1,52 @@
+---
+layout: page
+title: Services
+subtitle: Senior full-stack engineering, available for consulting and project work.
+permalink: /services/
+description: Software development and consulting services by Hemant Patkar — custom .NET & cloud apps, microservices, SSO integration, MVPs, and more.
+---
+
+<div class="services-list">
+    {% for s in site.data.services %}
+    <div class="service-row reveal">
+        <div class="service-icon"><i class="fa-solid {{ s.icon }}"></i></div>
+        <div class="service-detail">
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.summary }}</p>
+            <ul class="service-points">
+                {% for pt in s.points %}<li><i class="fa-solid fa-check"></i> {{ pt }}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<section class="process reveal">
+    <h2 class="section-title">How we&rsquo;ll work together</h2>
+    <div class="process-grid">
+        <div class="process-step"><span class="process-num">1</span><h4>Discovery</h4><p>A short call to understand your goals, constraints, and what success looks like.</p></div>
+        <div class="process-step"><span class="process-num">2</span><h4>Proposal</h4><p>A clear scope, timeline, and approach — no surprises, no jargon.</p></div>
+        <div class="process-step"><span class="process-num">3</span><h4>Build</h4><p>Iterative delivery with regular demos, so you see progress every week.</p></div>
+        <div class="process-step"><span class="process-num">4</span><h4>Launch &amp; support</h4><p>Ship to production with confidence, plus support to keep it running smoothly.</p></div>
+    </div>
+</section>
+
+<section class="faq reveal">
+    <h2 class="section-title">Frequently asked</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Do you work with startups and enterprises?</button></h2>
+            <div id="faq1" class="accordion-collapse collapse"><div class="accordion-body text-secondary">Both. I&rsquo;ve delivered enterprise platforms at large organisations and can also help a founder ship an MVP quickly.</div></div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What&rsquo;s your tech stack?</button></h2>
+            <div id="faq2" class="accordion-collapse collapse"><div class="accordion-body text-secondary">Primarily .NET Core, C#, Angular, and SQL, deployed on Azure or Google Cloud, with microservices and modern CI/CD.</div></div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">How do we get started?</button></h2>
+            <div id="faq3" class="accordion-collapse collapse"><div class="accordion-body text-secondary">Reach out via the <a href="/contact/">contact page</a> with a few details about your project, and we&rsquo;ll set up a discovery call.</div></div>
+        </div>
+    </div>
+</section>
+
+{% include cta.html %}

@@ -1,0 +1,12 @@
+# PLACEHOLDER — replace with real testimonials (e.g. from LinkedIn recommendations).
+# Leave this file empty ([]) to hide the testimonials section.
+- quote: >-
+    Hemant delivered a complex microservices platform on time and was a pleasure
+    to work with — clear communication and rock-solid engineering.
+  name: Client Name
+  role: Engineering Manager, Company
+- quote: >-
+    Deep expertise in .NET and cloud. He untangled our SSO integration and left
+    the codebase better than he found it.
+  name: Client Name
+  role: CTO, Startup

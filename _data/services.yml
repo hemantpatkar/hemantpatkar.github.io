@@ -1,0 +1,66 @@
+# Starter set derived from your skills — edit titles, copy, and which are `featured`.
+- title: Custom Web & Cloud Apps
+  icon: fa-laptop-code
+  featured: true
+  summary: >-
+    End-to-end web applications built with .NET Core and Angular, designed to
+    scale on Azure and Google Cloud.
+  points:
+    - Architecture, build, and deployment
+    - Cloud-native, containerised delivery
+    - Performance and security baked in
+
+- title: Microservices & APIs
+  icon: fa-diagram-project
+  featured: true
+  summary: >-
+    Resilient microservices, Web APIs, and system integrations (SAP, WCF, REST)
+    that keep your platform flexible.
+  points:
+    - Domain-driven service design
+    - Third-party & legacy integration
+    - Async workers and messaging
+
+- title: Authentication & SSO
+  icon: fa-shield-halved
+  featured: true
+  summary: >-
+    Enterprise single sign-on with Okta, OIDC, and SAML for secure, seamless
+    logins across web and mobile.
+  points:
+    - Okta / OIDC / SAML implementation
+    - Enterprise SSO for ecommerce & apps
+    - Token and identity flows
+
+- title: MVP & Product Engineering
+  icon: fa-rocket
+  featured: false
+  summary: >-
+    Turn an idea into a shipped product with agile delivery, modern
+    architecture, and a focus on time-to-market.
+  points:
+    - From concept to launch
+    - Iterative, agile delivery
+    - Built to grow with you
+
+- title: Database & Modernization
+  icon: fa-database
+  featured: false
+  summary: >-
+    MS SQL data design with EF/LINQ, plus migrating and upgrading legacy
+    systems without losing data or sleep.
+  points:
+    - Schema and query optimization
+    - EF Core / LINQ data layers
+    - Legacy migration & upgrades
+
+- title: Agile Delivery & Mentoring
+  icon: fa-people-group
+  featured: false
+  summary: >-
+    Scrum-certified delivery with Jira and Azure DevOps pipelines, plus
+    mentoring to level up your team.
+  points:
+    - Scrum / agile facilitation
+    - CI/CD pipeline setup
+    - Code review & mentoring

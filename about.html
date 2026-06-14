@@ -1,0 +1,158 @@
+---
+layout: page
+title: About
+subtitle: Scrum-Certified Full Stack Developer with 10+ years across enterprise software.
+permalink: /about/
+description: The background, skills, and experience of Hemant Patkar — full stack developer specialising in .NET Core, cloud, and microservices.
+---
+{% assign p = site.data.profile %}
+<div class="row gutters-sm">
+
+    <!-- Left column -->
+    <div class="col-md-4 col-sm-4">
+
+        <div class="card reveal">
+            <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="{{ p.avatar }}" alt="{{ p.name }}" class="rounded-circle" width="150" height="150">
+                    <div class="mt-2">
+                        <h4>{{ p.name }}</h4>
+                        <hr>
+                        <p class="text-secondary mb-1">{{ p.title }}</p>
+                        <p class="social-links mt-2">
+                            {% for s in p.socials %}
+                            <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <h6 class="d-flex align-items-center mb-3"><i class="fa-regular fa-address-card"></i> &nbsp; Basic Information</h6>
+                <ul class="list-unstyled mb-0">
+                    <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-envelope"></i></b></div><div class="col-sm-11 text-secondary"><a href="mailto:{{ p.email }}">{{ p.email }}</a></div></div></li>
+                    <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-cake-candles"></i></b></div><div class="col-sm-11 text-secondary">{{ p.birthday }}</div></div></li>
+                    <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-phone"></i></b></div><div class="col-sm-11 text-secondary"><a href="tel:{{ p.phone }}">{{ p.phone }}</a></div></div></li>
+                    <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-location-dot"></i></b></div><div class="col-sm-11 text-secondary">{{ p.location }}</div></div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-screwdriver-wrench"></i> &nbsp; Professional Skills</h6>
+                {% for sk in site.data.skills %}
+                <small class="skill-label" data-pct="{{ sk.level }}%">{{ sk.name }}</small>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" data-level="{{ sk.level }}" style="width:0"
+                         aria-valuenow="{{ sk.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-medal"></i> &nbsp; Certifications</h6>
+                <ul class="mb-0">{% for c in site.data.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-user"></i> &nbsp; Domains</h6>
+                <ul class="mb-0">{% for d in site.data.domains %}<li>{{ d }}</li>{% endfor %}</ul>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <h6 class="d-flex align-items-center mb-3"><i class="fa-brands fa-pinterest"></i> &nbsp; Interests</h6>
+                <ul class="mb-0">{% for i in site.data.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right column -->
+    <div class="col-md-8 col-sm-8">
+
+        <div class="card reveal mb-3">
+            <div class="card-body">
+                <b class="d-flex align-items-center mb-3"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Career Objective</b>
+                <hr>
+                <p class="text-secondary text-indent mb-0">{{ p.objective }}</p>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-briefcase"></i>&nbsp; Project Experience</b>
+                <hr>
+                <div class="accordion" id="experienceAccordion">
+                    {% for job in site.data.experience %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="exp-h{{ forloop.index }}">
+                            <button class="accordion-button{% unless forloop.first %} collapsed{% endunless %}" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#exp-c{{ forloop.index }}"
+                                    aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="exp-c{{ forloop.index }}">
+                                {{ job.company }}&nbsp;<span class="exp-period">{{ job.period }}</span>
+                            </button>
+                        </h2>
+                        <div id="exp-c{{ forloop.index }}" class="accordion-collapse collapse{% if forloop.first %} show{% endif %}" aria-labelledby="exp-h{{ forloop.index }}">
+                            <div class="accordion-body text-secondary">
+                                <ul class="mb-0">{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <b class="d-flex align-items-center mb-3"><i class="fa-brands fa-github"></i>&nbsp; Open-Source Projects</b>
+                <hr>
+                <div id="gh-projects" class="repo-grid" data-user="{{ site.github_username }}">
+                    <p class="text-secondary mb-0">Loading projects&hellip;</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <b class="d-flex align-items-center mb-3"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Education and Qualification</b>
+                <hr>
+                {% for e in site.data.education %}
+                <div class="row">
+                    <div class="col-sm-2"><h6 class="mb-0">{{ e.year }}</h6></div>
+                    <div class="col-sm-8 text-secondary">{{ e.detail }}</div>
+                    <div class="col-sm-2"><h6 class="mb-0">{{ e.score }}</h6></div>
+                </div>
+                {% unless forloop.last %}<hr>{% endunless %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-dumbbell"></i>&nbsp; Strengths &amp; Skills</b>
+                <hr>
+                <ul class="text-secondary mb-0">{% for s in site.data.strengths %}<li>{{ s }}</li>{% endfor %}</ul>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-body">
+                <a href="/attachments/HemantPatkar.pdf" download>
+                    <b class="d-flex align-items-center mb-0"><i class="fa-solid fa-download"></i>&nbsp; Download Profile (PDF)</b>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

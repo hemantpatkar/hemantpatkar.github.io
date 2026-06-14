@@ -1,10 +1,60 @@
 title: Hemant Patkar
-description: Scrum Certified Full Stack Developer — .NET Core, Cloud & Microservices.
+tagline: Full Stack Developer & Software Consultant
+description: >-
+  Hemant Patkar — Scrum-certified Full Stack Developer with 10+ years building
+  .NET Core, cloud-native, and microservices applications. Consulting, custom
+  software development, and the apps I'm building.
 url: "https://hemantpatkar.github.io"
+baseurl: ""
 github_username: hemantpatkar
 lang: en
 
 encoding: UTF-8
+
+# --- SEO / jekyll-seo-tag ---
+author:
+  name: Hemant Patkar
+  email: hemantpatkar.hsp@gmail.com
+logo: /assets/img/icon.svg
+social:
+  name: Hemant Patkar
+  links:
+    - https://github.com/hemantpatkar
+    - https://www.linkedin.com/in/hemant-patkar-11b482154/
+    - https://stackoverflow.com/users/5633485/hemant-p
+
+# Default share image for Open Graph / Twitter cards.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-image.png
+  - scope:
+      path: ""
+      type: apps
+    values:
+      layout: app
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+collections:
+  apps:
+    output: true
+    permalink: /apps/:path/
+
+# Pretty URLs for blog posts.
+permalink: /blog/:year/:month/:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: /feed.xml
 
 # Files/folders that should not be copied into the built site.
 exclude:

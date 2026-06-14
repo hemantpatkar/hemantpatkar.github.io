@@ -1,239 +1,149 @@
 ---
 layout: default
+title: Home
+description: >-
+  Hemant Patkar — Scrum-certified Full Stack Developer with 10+ years building
+  .NET Core, cloud-native, and microservices applications. Consulting, custom
+  software development, and the products I'm building.
 ---
 {% assign p = site.data.profile %}
-<div class="container">
-    <div class="main-body">
-        <div class="row gutters-sm">
 
-            <!-- ============================ Left column ============================ -->
-            <div class="col-md-4 col-sm-4">
-
-                <!-- Profile -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <img src="{{ p.avatar }}" alt="{{ p.name }}" class="rounded-circle" width="150" height="150">
-                            <div class="mt-2">
-                                <h4>{{ p.name }}</h4>
-                                <hr>
-                                <p class="text-secondary mb-1">{{ p.title }}</p>
-                                <p class="social-links mt-2">
-                                    {% for s in p.socials %}
-                                    <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>
-                                    {% endfor %}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Basic information -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-regular fa-address-card"></i> &nbsp; Basic Information</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-1"><b><i class="fa-solid fa-envelope"></i></b></div>
-                                    <div class="col-sm-11 text-secondary"><a href="mailto:{{ p.email }}">{{ p.email }}</a></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-1"><b><i class="fa-solid fa-cake-candles"></i></b></div>
-                                    <div class="col-sm-11 text-secondary">{{ p.birthday }}</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-1"><b><i class="fa-solid fa-phone"></i></b></div>
-                                    <div class="col-sm-11 text-secondary"><a href="tel:{{ p.phone }}">{{ p.phone }}</a></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-1"><b><i class="fa-solid fa-location-dot"></i></b></div>
-                                    <div class="col-sm-11 text-secondary">{{ p.location }}</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Professional skills -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-screwdriver-wrench"></i> &nbsp; Professional Skills</h6>
-                        {% for sk in site.data.skills %}
-                        <small class="skill-label" data-pct="{{ sk.level }}%">{{ sk.name }}</small>
-                        <div class="progress mb-3">
-                            <div class="progress-bar" role="progressbar" data-level="{{ sk.level }}" style="width:0"
-                                 aria-valuenow="{{ sk.level }}" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <!-- Certifications -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-medal"></i> &nbsp; Certifications</h6>
-                        <ul class="mb-0">
-                            {% for c in site.data.certifications %}<li>{{ c }}</li>{% endfor %}
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Domains -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-user"></i> &nbsp; Domains</h6>
-                        <ul class="mb-0">
-                            {% for d in site.data.domains %}<li>{{ d }}</li>{% endfor %}
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Interests -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-brands fa-pinterest"></i> &nbsp; Interests</h6>
-                        <ul class="mb-0">
-                            {% for i in site.data.interests %}<li>{{ i }}</li>{% endfor %}
-                        </ul>
-                    </div>
-                </div>
-
+<!-- ============================== Hero ============================== -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <p class="hero-eyebrow reveal">Scrum-Certified Full Stack Developer &middot; 10+ Years</p>
+            <h1 class="hero-title reveal">I build cloud-native software that scales.</h1>
+            <p class="hero-sub reveal">
+                From enterprise microservices at Capgemini and Ingram Micro to the products I&rsquo;m
+                building myself — I help teams and founders turn complex ideas into reliable,
+                well-architected .NET and cloud applications.
+            </p>
+            <div class="hero-actions reveal">
+                <a class="btn-primary" href="/contact/"><i class="fa-solid fa-paper-plane"></i> Work with me</a>
+                <a class="btn-ghost" href="/apps/"><i class="fa-solid fa-rocket"></i> Explore my apps</a>
             </div>
-            <!-- ========================== /Left column =========================== -->
-
-            <!-- ============================ Right column =========================== -->
-            <div class="col-md-8 col-sm-8">
-
-                <!-- Career objective + night mode -->
-                <div class="card reveal mb-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <b class="d-flex align-items-center mb-3"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Career Objective</b>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="float-end">
-                                    <div class="form-check form-switch">
-                                        <input type="checkbox" class="form-check-input" id="darkSwitch">
-                                        <label class="form-check-label" for="darkSwitch">Night Mode</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-secondary text-indent mb-0">{{ p.objective }}</p>
-                    </div>
-                </div>
-
-                <!-- Project experience -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-briefcase"></i>&nbsp; Project Experience</b>
-                        <hr>
-                        <div class="accordion" id="experienceAccordion">
-                            {% for job in site.data.experience %}
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="exp-h{{ forloop.index }}">
-                                    <button class="accordion-button{% unless forloop.first %} collapsed{% endunless %}" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#exp-c{{ forloop.index }}"
-                                            aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="exp-c{{ forloop.index }}">
-                                        {{ job.company }}&nbsp;<span class="exp-period">{{ job.period }}</span>
-                                    </button>
-                                </h2>
-                                <div id="exp-c{{ forloop.index }}" class="accordion-collapse collapse{% if forloop.first %} show{% endif %}" aria-labelledby="exp-h{{ forloop.index }}">
-                                    <div class="accordion-body text-secondary">
-                                        <ul class="mb-0">
-                                            {% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Live GitHub projects -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-brands fa-github"></i>&nbsp; Open-Source Projects</b>
-                        <hr>
-                        <div id="gh-projects" class="repo-grid" data-user="{{ site.github_username }}">
-                            <p class="text-secondary mb-0">Loading projects…</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Education and Qualification</b>
-                        <hr>
-                        {% for e in site.data.education %}
-                        <div class="row">
-                            <div class="col-sm-2"><h6 class="mb-0">{{ e.year }}</h6></div>
-                            <div class="col-sm-8 text-secondary">{{ e.detail }}</div>
-                            <div class="col-sm-2"><h6 class="mb-0">{{ e.score }}</h6></div>
-                        </div>
-                        {% unless forloop.last %}<hr>{% endunless %}
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <!-- Strengths -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-dumbbell"></i>&nbsp; Strengths &amp; Skills</b>
-                        <hr>
-                        <ul class="text-secondary mb-0">
-                            {% for s in site.data.strengths %}<li>{{ s }}</li>{% endfor %}
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact form -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-paper-plane"></i>&nbsp; Get in Touch</b>
-                        <hr>
-                        <form id="contact-form" novalidate>
-                            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                            <input type="hidden" name="subject" value="New message from your portfolio site">
-                            <input type="hidden" name="from_name" value="Portfolio Contact">
-                            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-                            <div class="mb-2">
-                                <input class="form-control" type="text" name="name" placeholder="Your name" required>
-                            </div>
-                            <div class="mb-2">
-                                <input class="form-control" type="email" name="email" placeholder="Your email" required>
-                            </div>
-                            <div class="mb-2">
-                                <textarea class="form-control" name="message" rows="4" placeholder="Your message" required></textarea>
-                            </div>
-                            <button class="btn-send" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-                            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Download -->
-                <div class="card reveal">
-                    <div class="card-body">
-                        <a href="/attachments/HemantPatkar.pdf" download>
-                            <b class="d-flex align-items-center mb-0"><i class="fa-solid fa-download"></i>&nbsp; Download Profile</b>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="hero-social reveal">
+                {% for s in p.socials %}
+                <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>
+                {% endfor %}
             </div>
-            <!-- ========================== /Right column ========================== -->
-
+        </div>
+        <div class="hero-photo reveal">
+            <img src="{{ p.avatar }}" alt="{{ p.name }}" width="280" height="280">
         </div>
     </div>
-</div>
+</section>
+
+<!-- ============================== Stats ============================== -->
+<section class="stats">
+    <div class="container stats-inner">
+        {% for s in site.data.stats %}
+        <div class="stat reveal">
+            <span class="stat-value">{{ s.value }}</span>
+            <span class="stat-label">{{ s.label }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- ============================== Trusted by ============================== -->
+<section class="trusted">
+    <div class="container">
+        <p class="trusted-label reveal">Experience delivered at</p>
+        <div class="trusted-logos reveal">
+            {% for c in site.data.clients %}<span class="trusted-logo">{{ c }}</span>{% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ============================== Services preview ============================== -->
+<section class="section">
+    <div class="container">
+        <div class="section-head reveal">
+            <h2 class="section-title">What I can help with</h2>
+            <p class="section-sub">Senior engineering for teams and founders who need it done right.</p>
+        </div>
+        <div class="card-grid">
+            {% for s in site.data.services %}{% if s.featured %}
+            <div class="svc-card reveal">
+                <span class="svc-icon"><i class="fa-solid {{ s.icon }}"></i></span>
+                <h3>{{ s.title }}</h3>
+                <p>{{ s.summary }}</p>
+            </div>
+            {% endif %}{% endfor %}
+        </div>
+        <div class="section-foot reveal">
+            <a class="link-arrow" href="/services/">See all services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== Featured apps ============================== -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-head reveal">
+            <h2 class="section-title">Apps I&rsquo;m building</h2>
+            <p class="section-sub">Products crafted with the same care I bring to client work.</p>
+        </div>
+        {% assign featured_apps = site.apps | where: "featured", true | sort: "order" %}
+        <div class="card-grid">
+            {% for app in featured_apps %}
+            <a class="app-card reveal" href="{{ app.url }}">
+                <span class="app-icon" style="background: {{ app.accent | default: '#3b5bdb' }}">
+                    <i class="fa-solid {{ app.icon | default: 'fa-rocket' }}"></i>
+                </span>
+                <div class="app-card-body">
+                    <h3>{{ app.name | default: app.title }}
+                        {% if app.status %}<span class="badge-status status-{{ app.status }}">{{ app.status | replace: '-', ' ' }}</span>{% endif %}
+                    </h3>
+                    <p>{{ app.tagline }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="section-foot reveal">
+            <a class="link-arrow" href="/apps/">Explore all apps <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== Testimonials ============================== -->
+{% if site.data.testimonials and site.data.testimonials.size > 0 %}
+<section class="section">
+    <div class="container">
+        <div class="section-head reveal">
+            <h2 class="section-title">What people say</h2>
+        </div>
+        <div class="card-grid">
+            {% for t in site.data.testimonials %}
+            <figure class="quote-card reveal">
+                <blockquote>{{ t.quote }}</blockquote>
+                <figcaption><strong>{{ t.name }}</strong><span>{{ t.role }}</span></figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ============================== About snapshot ============================== -->
+<section class="section section-alt">
+    <div class="container about-snap">
+        <div class="about-snap-text reveal">
+            <h2 class="section-title">About me</h2>
+            <p>{{ p.objective }}</p>
+            <a class="link-arrow" href="/about/">Read my full background <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="about-snap-skills reveal">
+            {% for sk in site.data.skills %}
+            <div class="mini-skill">
+                <div class="mini-skill-head"><span>{{ sk.name }}</span><span class="mini-skill-pct">{{ sk.level }}%</span></div>
+                <div class="progress"><div class="progress-bar" data-level="{{ sk.level }}" style="width:0"></div></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include cta.html %}

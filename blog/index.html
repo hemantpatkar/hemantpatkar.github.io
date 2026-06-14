@@ -1,0 +1,22 @@
+---
+layout: page
+title: Blog
+subtitle: Notes on engineering, building products, and lessons from the field.
+permalink: /blog/
+description: Articles and notes by Hemant Patkar on software engineering, .NET, cloud, and building products.
+---
+
+{% if site.posts.size > 0 %}
+<div class="post-list">
+    {% for post in site.posts %}
+    <a class="post-item reveal" href="{{ post.url }}">
+        <span class="post-item-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <span class="link-arrow">Read more <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<p class="text-secondary reveal">No posts yet — the first one is coming soon.</p>
+{% endif %}

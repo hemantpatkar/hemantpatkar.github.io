@@ -1,0 +1,32 @@
+<header class="site-header" id="siteHeader">
+    <nav class="container nav-inner" aria-label="Primary">
+        <a class="brand" href="/">
+            <span class="brand-mark">HP</span>
+            <span class="brand-name">Hemant Patkar</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            {% for item in site.data.nav %}
+            {% assign active = false %}
+            {% if item.url == "/" %}
+                {% if page.url == "/" %}{% assign active = true %}{% endif %}
+            {% else %}
+                {% if page.url contains item.url %}{% assign active = true %}{% endif %}
+            {% endif %}
+            <li>
+                <a href="{{ item.url }}"
+                   class="nav-link{% if item.cta %} nav-cta{% endif %}{% if active %} active{% endif %}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+            <li>
+                <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>

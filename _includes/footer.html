@@ -1,0 +1,29 @@
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a class="brand" href="/">
+                <span class="brand-mark">HP</span>
+                <span class="brand-name">Hemant Patkar</span>
+            </a>
+            <p class="footer-tag">{{ site.tagline }}</p>
+            <div class="footer-social">
+                {% for s in site.data.profile.socials %}
+                <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+            {% for item in site.data.nav %}
+            <a href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+        </nav>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <span>&copy; {{ site.time | date: "%Y" }} Hemant Patkar. All rights reserved.</span>
+            <span>Built with Jekyll &amp; hosted on GitHub Pages.</span>
+        </div>
+    </div>
+</footer>
