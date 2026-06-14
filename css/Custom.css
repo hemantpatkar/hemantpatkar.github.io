@@ -281,3 +281,173 @@ ul li {
 a[download] b {
     color: var(--accent);
 }
+
+/* --------------------------- Scroll reveal --------------------------- */
+/* Only hide-before-reveal when JS is active, so no-JS users see everything. */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    will-change: opacity, transform;
+}
+
+.js .reveal.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* --------------------------- Experience period --------------------------- */
+.exp-period {
+    font-weight: 400;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.accordion-button:not(.collapsed) .exp-period {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* --------------------------- GitHub projects --------------------------- */
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+@media (max-width: 575px) {
+    .repo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.repo-card {
+    display: block;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface-2);
+    color: var(--text) !important;
+    animation: repoIn 0.45s ease both;
+}
+
+.repo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent);
+    opacity: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@keyframes repoIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.repo-name {
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 0.35rem;
+}
+
+.repo-name i {
+    color: var(--accent);
+    margin-right: 0.4rem;
+}
+
+.repo-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0 0 0.6rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.repo-foot {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+}
+
+.repo-meta i {
+    margin-right: 0.3rem;
+    color: var(--accent);
+}
+
+.repo-meta .fa-circle {
+    font-size: 0.55em;
+    vertical-align: middle;
+}
+
+/* --------------------------- Contact form --------------------------- */
+.form-control {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 0.55rem 0.8rem;
+}
+
+.form-control:focus {
+    background: var(--surface);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+    color: var(--text);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+.btn-send {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-send:hover {
+    filter: brightness(1.07);
+    transform: translateY(-1px);
+}
+
+.btn-send:disabled {
+    opacity: 0.7;
+    cursor: default;
+    transform: none;
+}
+
+.form-status {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    min-height: 1.1em;
+}
+
+.form-status.ok {
+    color: #16a34a;
+}
+
+.form-status.err {
+    color: #dc2626;
+}

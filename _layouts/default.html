@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        /* Set theme + js flag before paint to avoid a flash of the wrong theme. */
+        (function () {
+            var d = document.documentElement;
+            d.className += " js";
+            try {
+                var t = localStorage.getItem("theme");
+                var m = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (t === "dark" || (!t && m)) d.classList.add("dark-mode");
+            } catch (e) { }
+        })();
+    </script>
+    <meta name="Description"
+          content="Author: Hemant Patkar, Illustrator: P. Picture, Category: Profile, Qualification: MCA, Experience: 10 Years">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=" />
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#3b5bdb">
+    <title>{{ page.title | default: site.title }}</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link href="/css/all.css" rel="stylesheet">
+    <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/img/avatar.jpg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/Custom.css">
+</head>
+
+<body>
+
+    {{ content }}
+
+    <!-- Google AdSense -->
+    <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421808684045146"
+            crossorigin="anonymous"></script>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <!-- Analytics: GoatCounter. Replace YOURCODE with your GoatCounter site code. -->
+    <script data-goatcounter="https://YOURCODE.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+</body>
+
+</html>

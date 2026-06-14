@@ -1,0 +1,22 @@
+- company: Capgemini
+  period: March 2021 - Present
+  points:
+    - Total talent management app designed with microservices architecture in .NET Core and Angular, hosted on Google Cloud.
+    - Designed worker process to sync data between App and SAP.
+    - Using Azure DevOps for task management and Pipelines for pushing the code.
+- company: Ingram Micro
+  period: Nov 2016 - March 2021
+  points:
+    - Implemented Okta for login with OIDC implementation for ecommerce Enterprise SSO and mobile app.
+    - Microservice with ASP.NET Core for Profile API with SAML used with Okta inline token to provide user information as a response to client application.
+    - Ecommerce Shopping Application with back office including SAP and Impulse Integration (MVC / Web API / WCF).
+    - Cisco Vendor Portal using MVC n-layer Architecture and APIs.
+    - Agile software development with Jira for all projects.
+- company: BigSun Technologies
+  period: Nov 2012 - March 2016
+  points:
+    - Warehousing System with integrated Financials (C#.NET and SQL).
+    - Online Support portal and Ticket system (C# ASP.NET and SQL).
+    - ERP (Finance, Stock and Production) with strong OOPS concepts in C#.NET.
+    - Data migration for upgrading old systems (MS SQL Server).
+    - Human Resource Management with mobile app integration (C# ASP.NET with Web Services).

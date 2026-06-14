@@ -1,0 +1,22 @@
+name: Hemant Patkar
+title: Scrum Certified Full Stack Developer
+avatar: /assets/img/avatar.jpg
+email: hemantpatkar.hsp@gmail.com
+birthday: 27th July 1987
+phone: "+918082109966"
+location: Mumbai 421301
+objective: >-
+  An MCA postgraduate having 10 years of experience in multiple domains. Seeking a
+  position to utilize my abilities and skills in the Information Technology Industry that
+  offers me professional growth and challenging work environment while being resourceful,
+  innovative and flexible.
+socials:
+  - name: GitHub
+    icon: fa-github
+    url: https://github.com/hemantpatkar
+  - name: LinkedIn
+    icon: fa-linkedin
+    url: https://www.linkedin.com/in/hemant-patkar-11b482154/
+  - name: Stack Overflow
+    icon: fa-stack-overflow
+    url: https://stackoverflow.com/users/5633485/hemant-p

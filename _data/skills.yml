@@ -1,0 +1,16 @@
+- name: "C# / .NET Core / MVC / OOPS"
+  level: 89
+- name: "Google Cloud / Azure Cloud"
+  level: 40
+- name: "Angular"
+  level: 50
+- name: "Okta SSO / OIDC"
+  level: 50
+- name: "Microservices / WCF / Web API"
+  level: 66
+- name: "MS SQL / LINQ / Entity Framework"
+  level: 66
+- name: "Scrum Agile / Jira / Confluence"
+  level: 75
+- name: "CSS / Bootstrap"
+  level: 90

@@ -1,0 +1,16 @@
+{
+  "name": "Hemant Patkar — Full Stack Developer",
+  "short_name": "Hemant Patkar",
+  "description": "Scrum Certified Full Stack Developer — .NET Core, Cloud & Microservices.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#3b5bdb",
+  "icons": [
+    { "src": "/assets/img/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/assets/img/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" },
+    { "src": "/assets/img/avatar.jpg", "sizes": "200x200", "type": "image/jpeg", "purpose": "any" }
+  ]
+}

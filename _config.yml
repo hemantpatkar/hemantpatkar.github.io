@@ -1,0 +1,23 @@
+title: Hemant Patkar
+description: Scrum Certified Full Stack Developer — .NET Core, Cloud & Microservices.
+url: "https://hemantpatkar.github.io"
+github_username: hemantpatkar
+lang: en
+
+encoding: UTF-8
+
+# Files/folders that should not be copied into the built site.
+exclude:
+  - dotnet
+  - less
+  - scss
+  - sprites
+  - svgs
+  - metadata
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - .buildtest
+  - vendor
+  - .vs
