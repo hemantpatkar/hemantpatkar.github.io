@@ -1400,85 +1400,78 @@ main {
 .install-note code { background: var(--surface); border: 1px solid var(--border); padding: 0.05rem 0.35rem; border-radius: 5px; font-size: 0.85em; }
 
 /* ------------------------------ Resume / PDF ------------------------------ */
-.resume-wrap { padding: 2rem 0 3.5rem; }
+/* Mirrors the site's card layout, but stays light in any theme. */
+.resume-page {
+    --bg: #f5f6f8;
+    --surface: #ffffff;
+    --surface-2: #fafbfc;
+    --text: #1f2430;
+    --text-muted: #6b7280;
+    --heading: #111827;
+    --border: #e7e9ee;
+    --accent: #3b5bdb;
+    --accent-soft: rgba(59, 91, 219, 0.08);
+    background: #f5f6f8;
+    color: var(--text);
+    padding: 2rem 0 3.5rem;
+}
 
 .resume-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 820px;
-    margin: 0 auto 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
-/* The resume is a white "sheet" on screen and in print, regardless of theme. */
-.resume,
-.dark-mode .resume {
-    max-width: 820px;
-    margin: 0 auto;
-    background: #ffffff;
-    color: #1f2430;
-    border: 1px solid #e7e9ee;
-    border-radius: 8px;
+/* Calmer cards in the document — no hover lift. */
+.resume-page .card:hover {
+    transform: none;
     box-shadow: var(--shadow);
-    padding: 2.5rem 2.75rem;
+    border-color: var(--border);
 }
 
-.resume-head h1 { font-size: 1.9rem; margin: 0; color: #111827; letter-spacing: -0.02em; }
-.resume-title { color: #3b5bdb; font-weight: 600; margin: 0.2rem 0 0.6rem; }
-.resume-contact { display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; font-size: 0.82rem; color: #444; margin: 0; }
-.resume-contact i { color: #3b5bdb; margin-right: 0.3rem; }
-
-.resume-section { margin-top: 1.4rem; }
-.resume-section h2 {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #111827;
-    border-bottom: 2px solid #e7e9ee;
-    padding-bottom: 0.25rem;
-    margin: 0 0 0.6rem;
+/* Static (non-accordion) experience entries so everything prints expanded. */
+.exp-static { margin-bottom: 1rem; break-inside: avoid; }
+.exp-static-head {
+    display: flex;
+    align-items: center;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
 }
-.resume-section > p { color: #333; line-height: 1.55; margin: 0; font-size: 0.9rem; }
-
-.resume-job { margin-bottom: 0.9rem; break-inside: avoid; }
-.resume-job-head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
-.rj-company { font-weight: 700; color: #111827; font-size: 0.92rem; }
-.rj-period { color: #666; font-size: 0.8rem; white-space: nowrap; }
-.rj-sub { font-size: 0.82rem; color: #555; margin: 0.15rem 0 0; }
-.resume-job ul, .resume-section > ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
-.resume-job li, .resume-section li { font-size: 0.86rem; color: #333; line-height: 1.5; margin-bottom: 0.15rem; }
-
-.resume-skills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem; }
-.resume-skills li { background: #eef2ff; color: #3b5bdb; border-radius: 5px; padding: 0.15rem 0.5rem; font-size: 0.8rem; }
-
-.resume-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.resume-inline { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
-.resume-inline li { font-size: 0.84rem; color: #333; background: #f3f4f6; border-radius: 5px; padding: 0.1rem 0.45rem; }
-
-@media (max-width: 600px) {
-    .resume, .dark-mode .resume { padding: 1.5rem; }
-    .resume-cols { grid-template-columns: 1fr; }
+.exp-static-head .exp-company { font-weight: 600; color: #fff; }
+.exp-static-head .exp-role { color: rgba(255, 255, 255, 0.85); margin-left: 0.4rem; }
+.exp-static-head .exp-period {
+    margin-left: auto;
+    padding-left: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.78rem;
+    white-space: nowrap;
 }
+.exp-static-body { margin: 0.55rem 0 0; padding-left: 1.1rem; }
+.exp-static-body li { font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.2rem; }
 
-/* Print: show only the resume, formatted for A4. */
-@page { size: A4; margin: 14mm; }
+/* Print: lay out only the resume on A4, preserving the card colours. */
+@page { size: A4; margin: 12mm; }
 
 @media print {
     .site-header, .site-footer, .to-top, .resume-toolbar, .cta-band, .no-print { display: none !important; }
     body { padding: 0; background: #fff; }
-    .resume-wrap { padding: 0; }
-    .container { max-width: none; padding: 0; }
-    .resume, .dark-mode .resume {
-        max-width: none;
-        margin: 0;
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
+    .resume-page {
         padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
-    .resume-section { margin-top: 11pt; }
-    .resume-job { break-inside: avoid; }
-    a { color: #000 !important; text-decoration: none; }
+    .container { max-width: none; padding: 0; }
+    .resume-page .card {
+        box-shadow: none;
+        border: 1px solid #e7e9ee;
+        break-inside: avoid;
+        margin-bottom: 0.6rem;
+    }
+    .exp-static { break-inside: avoid; }
 }
 
 /* App landing page — Android download block */
