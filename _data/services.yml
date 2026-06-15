@@ -10,9 +10,20 @@
     - Cloud-native, containerised delivery
     - Performance and security baked in
 
+- title: Website & Web App Templates
+  icon: fa-layer-group
+  featured: true
+  summary: >-
+    Ready-to-use, fully customizable website and web-app templates across many
+    domains — launch faster with a polished, responsive starting point.
+  points:
+    - Templates for multiple industries
+    - Modern, responsive, clean design
+    - Customizable and ready to deploy
+
 - title: Microservices & APIs
   icon: fa-diagram-project
-  featured: true
+  featured: false
   summary: >-
     Resilient microservices, Web APIs, and system integrations (SAP, WCF, REST)
     that keep your platform flexible.

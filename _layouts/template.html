@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<article class="tpl-page">
+    <section class="tpl-hero">
+        <div class="container tpl-hero-inner">
+            <div class="tpl-hero-text reveal">
+                <a class="back-link" href="/templates/"><i class="fa-solid fa-arrow-left"></i> All templates</a>
+                {% if page.domain %}<span class="tpl-domain">{{ page.domain }}</span>{% endif %}
+                <h1>{{ page.name | default: page.title }}</h1>
+                <p class="tpl-tagline">{{ page.tagline }}</p>
+                {% if page.price %}<p class="tpl-price">{{ page.price }}</p>{% endif %}
+                <div class="tpl-actions">
+                    {% if page.demo_url %}<a class="btn-ghost" href="{{ page.demo_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> Live Demo</a>{% endif %}
+                    {% if page.buy_url %}<a class="btn-primary" href="{{ page.buy_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Buy Template</a>{% endif %}
+                </div>
+            </div>
+            {% if page.image %}
+            <div class="tpl-hero-shot reveal">
+                <img src="{{ page.image }}" alt="{{ page.name }} preview" loading="lazy">
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    {% if page.features %}
+    <section class="container tpl-features">
+        <h2 class="section-title reveal">What&rsquo;s included</h2>
+        <div class="feature-grid">
+            {% for f in page.features %}
+            <div class="feature-card reveal">
+                <h3>{{ f.title }}</h3>
+                <p>{{ f.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if content != "" %}
+    <section class="container app-body reveal">
+        {{ content }}
+    </section>
+    {% endif %}
+</article>
+
+{% include cta.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ page.name | default: page.title | jsonify }},
+  "description": {{ page.tagline | jsonify }},
+  "category": {{ page.domain | default: "Website Template" | jsonify }},
+  "brand": { "@type": "Brand", "name": "Hemant Patkar" }
+}
+</script>

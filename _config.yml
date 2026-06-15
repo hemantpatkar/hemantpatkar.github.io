@@ -43,11 +43,19 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: templates
+    values:
+      layout: template
 
 collections:
   apps:
     output: true
     permalink: /apps/:path/
+  templates:
+    output: true
+    permalink: /templates/:path/
 
 # Pretty URLs for blog posts.
 permalink: /blog/:year/:month/:title/
