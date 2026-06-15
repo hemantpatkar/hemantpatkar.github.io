@@ -1485,15 +1485,19 @@ main {
         print-color-adjust: exact;
     }
     .container { max-width: none; padding: 0; }
+    /* Let cards flow across page boundaries (no forced gaps); only keep
+       individual job entries and rows from splitting. */
     .resume-page .card {
         box-shadow: none;
         border: 1px solid #e7e9ee;
-        break-inside: avoid;
+        break-inside: auto;
         margin-bottom: 0.5rem;
     }
-    .resume-page .card-body { padding: 0.65rem 0.85rem; }
-    .resume-page .exp-static { margin-bottom: 0.35rem; break-inside: avoid; }
-    .resume-page hr { margin: 0.35rem 0; }
+    .resume-page .card-body { padding: 0.6rem 0.8rem; }
+    .resume-page .exp-static { margin-bottom: 0.3rem; break-inside: avoid; }
+    .resume-page .row > div { break-inside: auto; }
+    .resume-page hr { margin: 0.3rem 0; }
+    .resume-page .progress { margin-bottom: 0.35rem !important; }
 }
 
 /* App landing page — Android download block */
