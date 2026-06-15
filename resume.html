@@ -7,129 +7,94 @@ description: Resume of Hemant Patkar — Solution Architect & Full Stack Develop
 {% assign p = site.data.profile %}
 <div class="resume-page" id="resume">
     <div class="container">
-
         <div class="resume-toolbar no-print">
             <a class="btn-ghost" href="/about/"><i class="fa-solid fa-arrow-left"></i> Back to site</a>
             <button class="btn-primary" id="downloadPdf"><i class="fa-solid fa-download"></i> Download PDF</button>
         </div>
 
-        <div class="row gutters-sm">
+        <div class="rd">
+            <!-- Sidebar -->
+            <aside class="rd-side">
+                <img class="rd-photo" src="{{ p.avatar }}" alt="{{ p.name }}">
 
-            <!-- Left column -->
-            <div class="col-md-4 col-sm-4">
+                <section class="rd-s">
+                    <h3>Contact</h3>
+                    <ul class="rd-contact">
+                        <li><i class="fa-solid fa-location-dot"></i><span>{{ p.location }}</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span>{{ p.phone }}</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>{{ p.email }}</span></li>
+                        <li><i class="fa-solid fa-globe"></i><span>{{ site.url | replace: 'https://', '' }}</span></li>
+                    </ul>
+                    <div class="rd-social">
+                        {% for s in p.socials %}<a href="{{ s.url }}" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>{% endfor %}
+                    </div>
+                </section>
 
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <img src="{{ p.avatar }}" alt="{{ p.name }}" class="rounded-circle" width="120" height="120">
-                            <div class="mt-2">
-                                <h4>{{ p.name }}</h4>
-                                <hr>
-                                <p class="text-secondary mb-1">{{ p.title }}</p>
-                                <p class="social-links mt-2">
-                                    {% for s in p.socials %}
-                                    <a href="{{ s.url }}" aria-label="{{ s.name }}"><i class="fa-brands {{ s.icon }}"></i></a>
-                                    {% endfor %}
-                                </p>
-                            </div>
+                <section class="rd-s">
+                    <h3>Skills</h3>
+                    <ul class="rd-list">{% for sk in site.data.skills %}<li>{{ sk.name }}</li>{% endfor %}</ul>
+                </section>
+
+                <section class="rd-s">
+                    <h3>Certifications</h3>
+                    <ul class="rd-list">{% for c in site.data.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
+                </section>
+
+                <section class="rd-s">
+                    <h3>Domains</h3>
+                    <ul class="rd-list">{% for d in site.data.domains %}<li>{{ d }}</li>{% endfor %}</ul>
+                </section>
+
+                <section class="rd-s">
+                    <h3>Interests</h3>
+                    <ul class="rd-list">{% for i in site.data.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+                </section>
+            </aside>
+
+            <!-- Main -->
+            <main class="rd-main">
+                <header class="rd-head">
+                    <h1>{{ p.name }}</h1>
+                    <p class="rd-role">{{ p.title }}</p>
+                </header>
+
+                <section class="rd-m">
+                    <h2>Profile</h2>
+                    <p>{{ p.objective }}</p>
+                </section>
+
+                <section class="rd-m">
+                    <h2>Work Experience</h2>
+                    {% for job in site.data.experience %}
+                    <div class="rd-job">
+                        <div class="rd-job-top">
+                            <span class="rd-job-title">{{ job.role | default: job.company }}</span>
+                            <span class="rd-job-date">{{ job.period }}</span>
                         </div>
+                        <div class="rd-job-co">{{ job.company }}</div>
+                        <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
                     </div>
-                </div>
+                    {% endfor %}
+                </section>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-regular fa-address-card"></i> &nbsp; Basic Information</h6>
-                        <ul class="list-unstyled mb-0">
-                            <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-envelope"></i></b></div><div class="col-sm-11 text-secondary">{{ p.email }}</div></div></li>
-                            <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-phone"></i></b></div><div class="col-sm-11 text-secondary">{{ p.phone }}</div></div></li>
-                            <li><div class="row"><div class="col-sm-1"><b><i class="fa-solid fa-location-dot"></i></b></div><div class="col-sm-11 text-secondary">{{ p.location }}</div></div></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-screwdriver-wrench"></i> &nbsp; Professional Skills</h6>
-                        {% for sk in site.data.skills %}
-                        <small class="skill-label" data-pct="{{ sk.level }}%">{{ sk.name }}</small>
-                        <div class="progress mb-3"><div class="progress-bar" style="width: {{ sk.level }}%"></div></div>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-medal"></i> &nbsp; Certifications</h6>
-                        <ul class="mb-0">{% for c in site.data.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-solid fa-user"></i> &nbsp; Domains</h6>
-                        <ul class="mb-0">{% for d in site.data.domains %}<li>{{ d }}</li>{% endfor %}</ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3"><i class="fa-brands fa-pinterest"></i> &nbsp; Interests</h6>
-                        <ul class="mb-0">{% for i in site.data.interests %}<li>{{ i }}</li>{% endfor %}</ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Right column -->
-            <div class="col-md-8 col-sm-8">
-
-                <div class="card">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-user-tie"></i>&nbsp; Professional Summary</b>
-                        <hr>
-                        <p class="text-secondary text-indent mb-0">{{ p.objective }}</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-briefcase"></i>&nbsp; Project Experience</b>
-                        <hr>
-                        {% for job in site.data.experience %}
-                        <div class="exp-static">
-                            <div class="exp-static-head">
-                                <span class="exp-company">{{ job.company }}</span>{% if job.role %}<span class="exp-role">&mdash; {{ job.role }}</span>{% endif %}<span class="exp-period">{{ job.period }}</span>
-                            </div>
-                            <ul class="exp-static-body text-secondary">{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+                <section class="rd-m">
+                    <h2>Education</h2>
+                    {% for e in site.data.education %}
+                    <div class="rd-job">
+                        <div class="rd-job-top">
+                            <span class="rd-job-title">{{ e.detail }}</span>
+                            <span class="rd-job-date">{{ e.year }}</span>
                         </div>
-                        {% endfor %}
+                        <div class="rd-job-co">Score: {{ e.score }}</div>
                     </div>
-                </div>
+                    {% endfor %}
+                </section>
 
-                <div class="card">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; Education and Qualification</b>
-                        <hr>
-                        {% for e in site.data.education %}
-                        <div class="row">
-                            <div class="col-sm-2"><h6 class="mb-0">{{ e.year }}</h6></div>
-                            <div class="col-sm-8 text-secondary">{{ e.detail }}</div>
-                            <div class="col-sm-2"><h6 class="mb-0">{{ e.score }}</h6></div>
-                        </div>
-                        {% unless forloop.last %}<hr>{% endunless %}
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <b class="d-flex align-items-center mb-3"><i class="fa-solid fa-dumbbell"></i>&nbsp; Strengths &amp; Skills</b>
-                        <hr>
-                        <ul class="text-secondary mb-0">{% for s in site.data.strengths %}<li>{{ s }}</li>{% endfor %}</ul>
-                    </div>
-                </div>
-
-            </div>
+                <section class="rd-m">
+                    <h2>Strengths</h2>
+                    <ul>{% for s in site.data.strengths %}<li>{{ s }}</li>{% endfor %}</ul>
+                </section>
+            </main>
         </div>
     </div>
 </div>
