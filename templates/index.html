@@ -8,27 +8,22 @@ description: Buy customizable website and web application templates by Hemant Pa
 
 {% assign all_templates = site.templates | sort: "order" %}
 {% if all_templates.size > 0 %}
-{% assign domains = all_templates | map: "domain" | uniq %}
-{% for dom in domains %}
-<section class="tpl-group reveal">
-    <h2 class="section-title">{{ dom }}</h2>
-    <div class="card-grid">
-        {% for t in all_templates %}{% if t.domain == dom %}
-        <a class="tpl-card" href="{{ t.url }}">
-            <div class="tpl-thumb"><img src="{{ t.image }}" alt="{{ t.name | default: t.title }}" loading="lazy"></div>
-            <div class="tpl-card-body">
-                <h3>{{ t.name | default: t.title }}</h3>
-                <p>{{ t.tagline }}</p>
-                <div class="tpl-card-foot">
-                    {% if t.price %}<span class="tpl-price-sm">{{ t.price }}</span>{% endif %}
-                    <span class="link-arrow">View <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
+<div class="card-grid tpl-grid">
+    {% for t in all_templates %}
+    <a class="tpl-card reveal" href="{{ t.url }}">
+        <div class="tpl-thumb"><img src="{{ t.image }}" alt="{{ t.name | default: t.title }}" loading="lazy"></div>
+        <div class="tpl-card-body">
+            {% if t.domain %}<span class="tpl-domain-badge">{{ t.domain }}</span>{% endif %}
+            <h3>{{ t.name | default: t.title }}</h3>
+            <p>{{ t.tagline }}</p>
+            <div class="tpl-card-foot">
+                {% if t.price %}<span class="tpl-price-sm">{{ t.price }}</span>{% endif %}
+                <span class="link-arrow">View <i class="fa-solid fa-arrow-right"></i></span>
             </div>
-        </a>
-        {% endif %}{% endfor %}
-    </div>
-</section>
-{% endfor %}
+        </div>
+    </a>
+    {% endfor %}
+</div>
 {% else %}
 <p class="text-secondary reveal">Templates are on the way — check back soon.</p>
 {% endif %}

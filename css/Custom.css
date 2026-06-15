@@ -1526,8 +1526,20 @@ main {
 }
 
 /* ------------------------------ Templates ------------------------------ */
-.tpl-group { margin-bottom: 2.5rem; }
-.tpl-group .section-title { text-align: left; margin-bottom: 1.2rem; }
+.tpl-grid { align-items: start; }
+
+.tpl-domain-badge {
+    display: inline-block;
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    margin-bottom: 0.5rem;
+}
 
 .tpl-card {
     display: block;
