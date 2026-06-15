@@ -1,0 +1,84 @@
+---
+layout: default
+title: Resume
+permalink: /resume/
+description: Resume of Hemant Patkar — Solution Architect & Full Stack Developer with 13+ years of experience.
+---
+{% assign p = site.data.profile %}
+<section class="resume-wrap">
+    <div class="container">
+        <div class="resume-toolbar no-print">
+            <a class="btn-ghost" href="/about/"><i class="fa-solid fa-arrow-left"></i> Back to site</a>
+            <button class="btn-primary" id="downloadPdf"><i class="fa-solid fa-download"></i> Download PDF</button>
+        </div>
+
+        <article class="resume" id="resume">
+            <header class="resume-head">
+                <h1>{{ p.name }}</h1>
+                <p class="resume-title">{{ p.title }}</p>
+                <p class="resume-contact">
+                    <span><i class="fa-solid fa-envelope"></i> {{ p.email }}</span>
+                    <span><i class="fa-solid fa-phone"></i> {{ p.phone }}</span>
+                    <span><i class="fa-solid fa-location-dot"></i> {{ p.location }}</span>
+                    <span><i class="fa-solid fa-globe"></i> {{ site.url | replace: 'https://', '' }}</span>
+                    {% for s in p.socials %}<span><i class="fa-brands {{ s.icon }}"></i> {{ s.url | replace: 'https://', '' | replace: 'www.', '' }}</span>{% endfor %}
+                </p>
+            </header>
+
+            <section class="resume-section">
+                <h2>Summary</h2>
+                <p>{{ p.objective }}</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>Experience</h2>
+                {% for job in site.data.experience %}
+                <div class="resume-job">
+                    <div class="resume-job-head">
+                        <span class="rj-company">{{ job.company }}{% if job.role %} &mdash; {{ job.role }}{% endif %}</span>
+                        <span class="rj-period">{{ job.period }}</span>
+                    </div>
+                    <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+                </div>
+                {% endfor %}
+            </section>
+
+            <section class="resume-section">
+                <h2>Skills</h2>
+                <ul class="resume-skills">
+                    {% for sk in site.data.skills %}<li>{{ sk.name }}</li>{% endfor %}
+                </ul>
+            </section>
+
+            <div class="resume-cols">
+                <section class="resume-section">
+                    <h2>Education</h2>
+                    {% for e in site.data.education %}
+                    <div class="resume-job">
+                        <div class="resume-job-head">
+                            <span class="rj-company">{{ e.year }}</span>
+                            <span class="rj-period">{{ e.score }}</span>
+                        </div>
+                        <p class="rj-sub">{{ e.detail }}</p>
+                    </div>
+                    {% endfor %}
+                </section>
+                <section class="resume-section">
+                    <h2>Certifications</h2>
+                    <ul>{% for c in site.data.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
+                </section>
+            </div>
+
+            <div class="resume-cols">
+                <section class="resume-section">
+                    <h2>Domains</h2>
+                    <ul class="resume-inline">{% for d in site.data.domains %}<li>{{ d }}</li>{% endfor %}</ul>
+                </section>
+                <section class="resume-section">
+                    <h2>Strengths</h2>
+                    <ul>{% for s in site.data.strengths %}<li>{{ s }}</li>{% endfor %}</ul>
+                </section>
+            </div>
+        </article>
+    </div>
+</section>

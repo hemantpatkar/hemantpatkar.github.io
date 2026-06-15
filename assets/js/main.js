@@ -10,7 +10,22 @@
         initReveal();
         loadProjects();
         initContactForm();
+        initResume();
     });
+
+    /* ------------------------------ Resume / PDF ------------------------------ */
+    function initResume() {
+        var btn = document.getElementById("downloadPdf");
+        if (btn) btn.addEventListener("click", function () { window.print(); });
+
+        // Auto-open the print dialog when arriving via ?print=1 (from the
+        // "Download Profile" buttons), once fonts are ready for crisp output.
+        if (/print/.test(location.search + location.hash) && document.getElementById("resume")) {
+            var go = function () { setTimeout(function () { window.print(); }, 300); };
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
+            else window.addEventListener("load", go);
+        }
+    }
 
     /* ---------------------------- Theme toggle ---------------------------- */
     function setThemeIcon(btn) {
