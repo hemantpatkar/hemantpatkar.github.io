@@ -36,6 +36,16 @@ description: Resume of Hemant Patkar — Solution Architect & Full Stack Develop
                 </section>
 
                 <section class="rd-s">
+                    <h3>Education</h3>
+                    {% for e in site.data.education %}
+                    <div class="rd-edu">
+                        <div class="rd-edu-deg">{{ e.detail }}</div>
+                        <div class="rd-edu-meta">{{ e.year }} &middot; {{ e.score }}</div>
+                    </div>
+                    {% endfor %}
+                </section>
+
+                <section class="rd-s">
                     <h3>Certifications</h3>
                     <ul class="rd-list">{% for c in site.data.certifications %}<li>{{ c }}</li>{% endfor %}</ul>
                 </section>
@@ -73,19 +83,6 @@ description: Resume of Hemant Patkar — Solution Architect & Full Stack Develop
                         </div>
                         <div class="rd-job-co">{{ job.company }}</div>
                         <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
-                    </div>
-                    {% endfor %}
-                </section>
-
-                <section class="rd-m">
-                    <h2>Education</h2>
-                    {% for e in site.data.education %}
-                    <div class="rd-job">
-                        <div class="rd-job-top">
-                            <span class="rd-job-title">{{ e.detail }}</span>
-                            <span class="rd-job-date">{{ e.year }}</span>
-                        </div>
-                        <div class="rd-job-co">Score: {{ e.score }}</div>
                     </div>
                     {% endfor %}
                 </section>

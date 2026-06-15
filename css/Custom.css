@@ -1468,6 +1468,10 @@ main {
 .rd-list li { position: relative; font-size: 10.8px; line-height: 1.35; color: #cdd6e6; margin-bottom: 5px; padding-left: 12px; }
 .rd-list li::before { content: ""; position: absolute; left: 0; top: 6px; width: 4px; height: 4px; border-radius: 50%; background: #8aa0c8; }
 
+.rd-edu { margin-bottom: 8px; }
+.rd-edu-deg { font-size: 10.8px; line-height: 1.35; font-weight: 600; color: #e6ebf3; }
+.rd-edu-meta { font-size: 10px; color: #9fb0cd; margin-top: 1px; }
+
 /* ---- Main ---- */
 .rd-main { width: 66%; padding: 26px 28px; color: #333; }
 
