@@ -1449,11 +1449,31 @@ main {
     font-size: 0.78rem;
     white-space: nowrap;
 }
-.exp-static-body { margin: 0.55rem 0 0; padding-left: 1.1rem; }
-.exp-static-body li { font-size: 0.88rem; line-height: 1.5; margin-bottom: 0.2rem; }
+.exp-static-body { margin: 0.4rem 0 0; padding-left: 1.05rem; }
+.exp-static-body li { font-size: 0.8rem; line-height: 1.38; margin-bottom: 0.1rem; }
+
+/* Compact the whole document so the full profile fits on a single page. */
+.resume-page .card { margin-bottom: 0.65rem; }
+.resume-page .card-body { padding: 0.8rem 1rem; }
+.resume-page hr { margin: 0.45rem 0; }
+.resume-page h4 { font-size: 1.1rem; }
+.resume-page h6 { font-size: 0.84rem; margin-bottom: 0.5rem !important; }
+.resume-page .card-body > b { font-size: 0.88rem; margin-bottom: 0.45rem !important; }
+.resume-page p, .resume-page li, .resume-page .text-secondary { font-size: 0.8rem; line-height: 1.4; }
+.resume-page li { margin-bottom: 0.08rem; }
+.resume-page ul { margin-bottom: 0; }
+.resume-page .skill-label { font-size: 0.72rem; margin-bottom: 0.18rem; }
+.resume-page .progress { height: 5px !important; margin-bottom: 0.45rem !important; }
+.resume-page .rounded-circle { width: 84px !important; height: 84px !important; border-width: 3px; }
+.resume-page .social-links { gap: 0.3rem; }
+.resume-page .social-links a { width: 31px; height: 31px; }
+.resume-page .social-links a i { font-size: 0.85rem; }
+.resume-page .list-unstyled li { padding: 0.12rem 0; }
+.resume-page .exp-static { margin-bottom: 0.45rem; }
+.resume-page .exp-static-head { padding: 0.38rem 0.7rem; }
 
 /* Print: lay out only the resume on A4, preserving the card colours. */
-@page { size: A4; margin: 12mm; }
+@page { size: A4; margin: 9mm; }
 
 @media print {
     .site-header, .site-footer, .to-top, .resume-toolbar, .cta-band, .no-print { display: none !important; }
@@ -1469,9 +1489,11 @@ main {
         box-shadow: none;
         border: 1px solid #e7e9ee;
         break-inside: avoid;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
     }
-    .exp-static { break-inside: avoid; }
+    .resume-page .card-body { padding: 0.65rem 0.85rem; }
+    .resume-page .exp-static { margin-bottom: 0.35rem; break-inside: avoid; }
+    .resume-page hr { margin: 0.35rem 0; }
 }
 
 /* App landing page — Android download block */
