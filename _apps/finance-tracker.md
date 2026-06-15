@@ -8,6 +8,8 @@ accent: "#16a34a"
 order: 2
 featured: true
 screenshot: /assets/img/app-placeholder.svg
+android:
+  apk: finance-tracker.apk
 description: A personal finance tracker to manage income, expenses, budgets, and goals.
 features:
   - title: Track income & expenses

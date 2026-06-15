@@ -9,6 +9,10 @@ baseurl: ""
 github_username: hemantpatkar
 lang: en
 
+# Android APK downloads are hosted as GitHub Release assets in this repo.
+# The /releases/latest/download/ path always serves the newest release.
+android_release_base: "https://github.com/theaiarc/Android/releases/latest/download"
+
 encoding: UTF-8
 
 # --- SEO / jekyll-seo-tag ---

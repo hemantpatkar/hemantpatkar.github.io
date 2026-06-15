@@ -8,6 +8,8 @@ accent: "#2563eb"
 order: 3
 featured: true
 screenshot: /assets/img/app-placeholder.svg
+android:
+  apk: accounting.apk
 description: A general accounting application for invoicing, bookkeeping, and financial reporting.
 features:
   - title: Invoicing & billing

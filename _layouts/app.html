@@ -51,6 +51,25 @@ layout: default
         {{ content }}
     </section>
     {% endif %}
+
+    {% if page.android %}
+    {% assign qr = page.android.apk | replace: '.apk', '.svg' %}
+    <section class="container app-download reveal">
+        <div class="app-dl-inner">
+            <div class="app-dl-text">
+                <h2 class="section-title">Get it on Android</h2>
+                <p>Download the APK directly, or scan the code with your phone.</p>
+                <a class="btn-primary" href="{{ site.android_release_base }}/{{ page.android.apk }}">
+                    <i class="fa-brands fa-android"></i> Download APK{% if page.android.version %} (v{{ page.android.version }}){% endif %}
+                </a>
+            </div>
+            <div class="dl-qr">
+                <img src="/assets/img/qr/{{ qr }}" alt="QR code to download {{ page.name }}" width="140" height="140" loading="lazy">
+                <span>Scan to download</span>
+            </div>
+        </div>
+    </section>
+    {% endif %}
 </article>
 
 {% include cta.html %}

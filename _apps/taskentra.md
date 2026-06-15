@@ -8,6 +8,8 @@ accent: "#0d9488"
 order: 1
 featured: true
 screenshot: /assets/img/app-placeholder.svg
+android:
+  apk: taskentra.apk
 description: TaskEntra is a project management tool to plan work, track progress, and keep teams aligned.
 features:
   - title: Plan & organize

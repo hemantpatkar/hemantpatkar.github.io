@@ -1359,3 +1359,63 @@ main {
 .notfound { text-align: center; padding: clamp(3rem, 10vw, 6rem) 0; }
 .notfound h1 { font-size: clamp(4rem, 15vw, 8rem); font-weight: 800; color: var(--accent); margin: 0; line-height: 1; }
 .notfound p { color: var(--text-muted); font-size: 1.1rem; margin: 1rem 0 2rem; }
+
+/* ------------------------------ Download / APK ------------------------------ */
+.download-grid { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 2rem; }
+
+.dl-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.dl-main { display: flex; gap: 1.1rem; align-items: flex-start; }
+.dl-card .app-icon { width: 56px; height: 56px; font-size: 1.4rem; border-radius: 14px; }
+
+.dl-info h3 { margin: 0 0 0.3rem; color: var(--heading); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.dl-version { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); background: var(--surface-2); border: 1px solid var(--border); padding: 0.1rem 0.45rem; border-radius: 100px; }
+.dl-info p { color: var(--text-muted); font-size: 0.92rem; margin: 0 0 0.9rem; line-height: 1.5; }
+.dl-actions { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+.dl-qr { flex: none; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.dl-qr img { width: 140px; height: 140px; border: 1px solid var(--border); border-radius: 12px; background: #fff; padding: 6px; }
+.dl-qr span { font-size: 0.72rem; color: var(--text-muted); }
+
+@media (max-width: 640px) {
+    .dl-card { flex-direction: column; align-items: stretch; }
+    .dl-qr { align-self: center; }
+}
+
+.install-note { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+.install-note h3 { color: var(--heading); font-size: 1.1rem; margin: 0 0 0.8rem; }
+.install-note h3 i { color: var(--accent); margin-right: 0.4rem; }
+.install-note ol { color: var(--text); padding-left: 1.2rem; margin: 0 0 0.8rem; }
+.install-note li { margin-bottom: 0.4rem; }
+.install-note code { background: var(--surface); border: 1px solid var(--border); padding: 0.05rem 0.35rem; border-radius: 5px; font-size: 0.85em; }
+
+/* App landing page — Android download block */
+.app-download { padding: 1rem 0 2.5rem; }
+.app-dl-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    box-shadow: var(--shadow);
+}
+.app-dl-text .section-title { text-align: left; margin-bottom: 0.4rem; }
+.app-dl-text p { color: var(--text-muted); margin: 0 0 1.1rem; }
+
+@media (max-width: 640px) {
+    .app-dl-inner { flex-direction: column; text-align: center; }
+    .app-dl-text .section-title { text-align: center; }
+}
