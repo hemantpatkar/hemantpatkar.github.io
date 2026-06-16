@@ -30,4 +30,18 @@
     <link rel="stylesheet" type="text/css" href="/css/Custom.css">
 
     {% feed_meta %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hemant Patkar",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}/assets/img/avatar.jpg",
+      "jobTitle": "Solution Architect",
+      "description": {{ site.data.profile.objective | strip_newlines | jsonify }},
+      "knowsAbout": [".NET Core", "Azure", "Microservices", "Solution Architecture", "Cloud", "Angular", "Single Sign-On"],
+      "sameAs": {{ site.social.links | jsonify }}
+    }
+    </script>
 </head>
