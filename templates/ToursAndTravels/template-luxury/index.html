@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Élan — Luxury Travel</title>
+  <meta name="description" content="Élan — an elegant, luxury travel agency template." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { navy: { DEFAULT: '#10243e', dark: '#0a1828' }, gold: { DEFAULT: '#c9a227', light: '#e0bf52' }, cream: '#f7f3ec' },
+      fontFamily: { serif: ['"Cormorant Garamond"', 'serif'], sans: ['"Jost"', 'sans-serif'] },
+    } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', serif; }
+    .img-zoom-wrap { overflow: hidden; }
+    .img-zoom { transition: transform .9s ease; }
+    .img-zoom-wrap:hover .img-zoom { transform: scale(1.07); }
+    .gold-line::after { content:''; display:block; width:60px; height:2px; background:#c9a227; margin:1rem auto 0; }
+  </style>
+</head>
+<body class="bg-cream text-navy antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur border-b border-navy/10">
+    <nav class="max-w-6xl mx-auto px-6 flex items-center justify-between h-24">
+      <a href="#home" class="font-serif text-3xl font-bold tracking-wide">Élan<span class="text-gold"> Voyages</span></a>
+      <ul class="hidden md:flex items-center gap-10 text-sm uppercase tracking-[0.15em] text-navy/70">
+        <li><a href="#home" class="hover:text-gold transition">Home</a></li>
+        <li><a href="#packages" class="hover:text-gold transition">Journeys</a></li>
+        <li><a href="#destinations" class="hover:text-gold transition">Destinations</a></li>
+        <li><a href="#about" class="hover:text-gold transition">Maison</a></li>
+        <li><a href="#contact" class="hover:text-gold transition">Enquire</a></li>
+      </ul>
+      <a href="#contact" class="hidden md:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-sm uppercase tracking-[0.15em] px-6 py-2.5 transition">Enquire</a>
+      <button id="mb" class="md:hidden text-2xl"><i class="ri-menu-line"></i></button>
+    </nav>
+    <div id="mm" class="hidden md:hidden border-t border-navy/10 px-6 py-4 uppercase tracking-[0.15em] text-sm">
+      <ul class="flex flex-col gap-4 text-navy/80">
+        <li><a href="#home">Home</a></li><li><a href="#packages">Journeys</a></li>
+        <li><a href="#destinations">Destinations</a></li><li><a href="#about">Maison</a></li><li><a href="#contact">Enquire</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative h-screen min-h-[640px] flex items-center justify-center text-center">
+    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2000&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Luxury resort" />
+    <div class="absolute inset-0 bg-navy/55"></div>
+    <div class="relative z-10 px-6 max-w-3xl">
+      <p class="text-gold-light uppercase tracking-[0.4em] text-sm mb-6">Bespoke Travel · Est. 2014</p>
+      <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl text-white leading-tight">Journeys Worthy<br />of a Lifetime</h1>
+      <p class="text-white/80 text-lg mt-6 max-w-xl mx-auto">Privately curated escapes to the world's most extraordinary places — designed entirely around you.</p>
+      <a href="#packages" class="inline-block mt-9 border border-gold text-gold-light hover:bg-gold hover:text-white uppercase tracking-[0.2em] text-sm px-10 py-4 transition">Discover Journeys</a>
+    </div>
+  </section>
+
+  <!-- Journeys -->
+  <section id="packages" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold uppercase tracking-[0.3em] text-sm mb-2">Signature</p>
+        <h2 class="font-serif text-5xl gold-line">Curated Journeys</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="bg-white shadow-sm group">
+          <div class="img-zoom-wrap h-72"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=700&q=80" class="img-zoom w-full h-full object-cover" alt="Maldives"></div>
+          <div class="p-8 text-center">
+            <p class="text-gold uppercase tracking-[0.2em] text-xs mb-2">Maldives · 5 Nights</p>
+            <h3 class="font-serif text-3xl mb-3">Private Atoll</h3>
+            <p class="text-navy/60 text-sm mb-5">A secluded overwater residence, butler service, and a private chef.</p>
+            <p class="font-serif text-2xl">from $6,400</p>
+          </div>
+        </article>
+        <article class="bg-white shadow-sm group">
+          <div class="img-zoom-wrap h-72"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80" class="img-zoom w-full h-full object-cover" alt="Paris"></div>
+          <div class="p-8 text-center">
+            <p class="text-gold uppercase tracking-[0.2em] text-xs mb-2">Paris · 4 Nights</p>
+            <h3 class="font-serif text-3xl mb-3">Haute Parisienne</h3>
+            <p class="text-navy/60 text-sm mb-5">Palace suites, after-hours museum access, and Michelin tables.</p>
+            <p class="font-serif text-2xl">from $5,200</p>
+          </div>
+        </article>
+        <article class="bg-white shadow-sm group">
+          <div class="img-zoom-wrap h-72"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80" class="img-zoom w-full h-full object-cover" alt="Dubai"></div>
+          <div class="p-8 text-center">
+            <p class="text-gold uppercase tracking-[0.2em] text-xs mb-2">Dubai · 5 Nights</p>
+            <h3 class="font-serif text-3xl mb-3">Gilded Sands</h3>
+            <p class="text-navy/60 text-sm mb-5">Sky-suite living, private yacht, and a desert palace dinner.</p>
+            <p class="font-serif text-2xl">from $7,100</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section id="destinations" class="py-24 px-6 bg-navy text-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold uppercase tracking-[0.3em] text-sm mb-2">The world, curated</p>
+        <h2 class="font-serif text-5xl gold-line">Destinations</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="img-zoom-wrap relative h-80"><img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Santorini"><div class="absolute inset-0 bg-navy/30"></div><span class="absolute bottom-5 left-0 right-0 text-center font-serif text-2xl">Santorini</span></div>
+        <div class="img-zoom-wrap relative h-80"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Tuscany"><div class="absolute inset-0 bg-navy/30"></div><span class="absolute bottom-5 left-0 right-0 text-center font-serif text-2xl">Tuscany</span></div>
+        <div class="img-zoom-wrap relative h-80"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Kyoto"><div class="absolute inset-0 bg-navy/30"></div><span class="absolute bottom-5 left-0 right-0 text-center font-serif text-2xl">Kyoto</span></div>
+        <div class="img-zoom-wrap relative h-80"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Bali"><div class="absolute inset-0 bg-navy/30"></div><span class="absolute bottom-5 left-0 right-0 text-center font-serif text-2xl">Bali</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maison / About -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div class="img-zoom-wrap h-[480px]"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=80" class="img-zoom w-full h-full object-cover" alt="Luxury interior"></div>
+      <div>
+        <p class="text-gold uppercase tracking-[0.3em] text-sm mb-2">The Maison</p>
+        <h2 class="font-serif text-5xl mb-6">A decade of quiet luxury</h2>
+        <p class="text-navy/60 leading-relaxed mb-4">Élan Voyages is a private travel atelier. We don't sell packages — we compose journeys, one client at a time, with access most never see.</p>
+        <p class="text-navy/60 leading-relaxed mb-8">From a single villa to a chartered odyssey, every detail is considered, discreet, and entirely yours.</p>
+        <div class="flex gap-10">
+          <div><p class="font-serif text-4xl text-gold">98%</p><p class="text-navy/50 text-sm uppercase tracking-wider">Return guests</p></div>
+          <div><p class="font-serif text-4xl text-gold">24/7</p><p class="text-navy/50 text-sm uppercase tracking-wider">Concierge</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6 bg-navy-dark text-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-gold uppercase tracking-[0.3em] text-sm mb-2">Enquire</p>
+      <h2 class="font-serif text-5xl gold-line mb-4">Begin Your Journey</h2>
+      <p class="text-white/60 mb-10">Share your vision. Your personal travel designer will respond within 24 hours.</p>
+      <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('ok').classList.remove('hidden');" class="grid sm:grid-cols-2 gap-5 text-left">
+        <input required placeholder="Full Name" class="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-gold placeholder-white/40" />
+        <input required type="email" placeholder="Email" class="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-gold placeholder-white/40" />
+        <textarea placeholder="Tell us about your dream journey" rows="3" class="sm:col-span-2 bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-gold placeholder-white/40"></textarea>
+        <button class="sm:col-span-2 border border-gold text-gold-light hover:bg-gold hover:text-navy uppercase tracking-[0.2em] text-sm py-4 transition mt-2">Submit Enquiry</button>
+        <p id="ok" class="hidden sm:col-span-2 text-center text-gold-light">Thank you. Your travel designer will be in touch shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 px-6 text-center text-sm text-navy/50 bg-cream">
+    <p class="font-serif text-2xl text-navy mb-2">Élan<span class="text-gold"> Voyages</span></p>
+    <p class="mb-2"><a href="privacy.html" class="hover:text-gold">Privacy Policy</a> · <a href="terms.html" class="hover:text-gold">Terms of Service</a></p>
+    © <span id="yr"></span> Élan Voyages. A luxury template.
+  </footer>
+
+  <script>
+    document.getElementById('mb').onclick = () => document.getElementById('mm').classList.toggle('hidden');
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

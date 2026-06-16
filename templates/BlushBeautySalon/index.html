@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blush Beauty Salon — Choose a Template</title>
+    <meta name="description" content="Preview and choose from three design templates for the Blush Beauty Salon website: Blush Rose, Gold Luxe and Sage Spa.">
+    <meta name="theme-color" content="#c96a86">
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/fonts/blush.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #14110f;
+            --panel: #1d1916;
+            --text: #efe9e3;
+            --muted: #a99f96;
+            --line: #2c2722;
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "Poppins", -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: var(--sans);
+            background:
+                radial-gradient(circle at 15% 0%, rgba(201, 106, 134, 0.12), transparent 40%),
+                radial-gradient(circle at 85% 100%, rgba(201, 168, 106, 0.10), transparent 45%),
+                var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero */
+        header.intro { text-align: center; padding: 84px 0 56px; }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .logo .mark {
+            width: 46px; height: 46px; border-radius: 50%;
+            background: #c96a86; color: #fff;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-family: var(--serif); font-weight: 700; font-size: 1.3rem;
+            box-shadow: 0 8px 22px rgba(201, 106, 134, 0.4);
+        }
+
+        .logo .name { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; }
+
+        .eyebrow {
+            font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
+            color: #c9a86a; font-weight: 600;
+        }
+
+        header.intro h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 600;
+            margin: 0.8rem 0 0.6rem;
+            line-height: 1.1;
+        }
+
+        header.intro h1 em { font-style: italic; color: #e58aa4; }
+
+        header.intro p {
+            color: var(--muted);
+            max-width: 40rem; margin: 0 auto;
+            font-size: 1.08rem;
+        }
+
+        /* Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            padding: 24px 0 40px;
+        }
+
+        .tpl {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tpl:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+            border-color: var(--accent);
+        }
+
+        .tpl .shot { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+
+        .tpl .shot img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .tpl:hover .shot img { transform: scale(1.06); }
+
+        .tpl .shot .veil {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55));
+        }
+
+        .tpl .tag {
+            position: absolute; top: 14px; left: 14px;
+            background: var(--accent); color: #fff;
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+            padding: 0.35rem 0.8rem; border-radius: 100px;
+        }
+
+        .tpl .body { padding: 1.6rem 1.5rem 1.7rem; display: flex; flex-direction: column; flex: 1; }
+
+        .tpl h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.15rem; }
+
+        .tpl .style { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.9rem; }
+
+        .tpl p.desc { color: var(--muted); font-size: 0.93rem; margin-bottom: 1.1rem; }
+
+        .swatches { display: flex; gap: 0.45rem; margin-bottom: 0.7rem; }
+        .swatches span { width: 24px; height: 24px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); }
+
+        .feats { list-style: none; margin: 0 0 1.4rem; padding: 0; }
+        .feats li { font-size: 0.86rem; color: var(--muted); padding: 0.18rem 0; }
+        .feats li i { color: var(--accent); width: 18px; }
+
+        .actions { margin-top: auto; display: flex; gap: 0.6rem; }
+
+        .btn {
+            flex: 1;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+            font-family: var(--sans); font-weight: 600; font-size: 0.9rem;
+            padding: 0.8rem 1rem; border-radius: 100px; cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-fill { background: var(--accent); color: #fff; }
+        .btn-fill:hover { transform: translateY(-2px); opacity: 0.92; }
+        .btn-out { border: 1.5px solid var(--line); color: var(--text); flex: 0 0 auto; }
+        .btn-out:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Per-theme accents */
+        .tpl.blush { --accent: #c96a86; }
+        .tpl.gold  { --accent: #c0a16b; }
+        .tpl.sage  { --accent: #7e9b76; }
+
+        footer.note { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 28px 0 60px; }
+        footer.note code { background: var(--panel); padding: 0.15rem 0.45rem; border-radius: 6px; color: #d8b87a; }
+
+        @media (max-width: 900px) { .grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
+    </style>
+</head>
+
+<body>
+    <header class="intro">
+        <div class="wrap">
+            <span class="logo">
+                <span class="mark">B</span>
+                <span class="name">Blush Beauty Salon</span>
+            </span>
+            <p class="eyebrow">Three designs, one salon</p>
+            <h1>Choose your <em>template</em></h1>
+            <p>Each option is a complete, fully-offline website for the same salon — with its own layout, palette and typography. Preview them and pick your favourite.</p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <div class="grid">
+            <!-- Blush Rose -->
+            <article class="tpl blush">
+                <a class="shot" href="template-blush/index.html">
+                    <img src="assets/img/photo-1522337660859-02fbefca4702.jpg" alt="Blush Rose template preview">
+                    <span class="veil"></span>
+                    <span class="tag">Romantic</span>
+                </a>
+                <div class="body">
+                    <h2>Blush Rose</h2>
+                    <p class="style">Playfair Display · Poppins</p>
+                    <div class="swatches">
+                        <span style="background:#c96a86"></span>
+                        <span style="background:#fbf4f2"></span>
+                        <span style="background:#c9a86a"></span>
+                        <span style="background:#2e2125"></span>
+                    </div>
+                    <p class="desc">Soft, feminine and warm — a light blush palette with elegant serif headings.</p>
+                    <ul class="feats">
+                        <li><i class="fa-solid fa-check"></i> Split two-column hero</li>
+                        <li><i class="fa-solid fa-check"></i> Horizontal service strip</li>
+                        <li><i class="fa-solid fa-check"></i> Light &amp; dark mode</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-fill" href="template-blush/index.html"><i class="fa-solid fa-eye"></i> View template</a>
+                        <a class="btn btn-out" href="template-blush/index.html" target="_blank" rel="noopener" aria-label="Open in new tab"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Gold Luxe -->
+            <article class="tpl gold">
+                <a class="shot" href="template-gold/index.html">
+                    <img src="assets/img/photo-1487412947147-5cebf100ffc2.jpg" alt="Gold Luxe template preview">
+                    <span class="veil"></span>
+                    <span class="tag">Luxurious</span>
+                </a>
+                <div class="body">
+                    <h2>Gold Luxe</h2>
+                    <p class="style">Cormorant Garamond · Jost</p>
+                    <div class="swatches">
+                        <span style="background:#c0a16b"></span>
+                        <span style="background:#16110f"></span>
+                        <span style="background:#efe7dc"></span>
+                        <span style="background:#d8b87a"></span>
+                    </div>
+                    <p class="desc">Dark, high-end and dramatic — gold on espresso with a refined boutique feel.</p>
+                    <ul class="feats">
+                        <li><i class="fa-solid fa-check"></i> Full-bleed image hero</li>
+                        <li><i class="fa-solid fa-check"></i> Overlay (transparent) nav</li>
+                        <li><i class="fa-solid fa-check"></i> Dark default + ivory mode</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-fill" href="template-gold/index.html"><i class="fa-solid fa-eye"></i> View template</a>
+                        <a class="btn btn-out" href="template-gold/index.html" target="_blank" rel="noopener" aria-label="Open in new tab"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Sage Spa -->
+            <article class="tpl sage">
+                <a class="shot" href="template-sage/index.html">
+                    <img src="assets/img/photo-1596704017254-9b121068fb31.jpg" alt="Sage Spa template preview">
+                    <span class="veil"></span>
+                    <span class="tag">Natural</span>
+                </a>
+                <div class="body">
+                    <h2>Sage Spa</h2>
+                    <p class="style">Fraunces · Inter</p>
+                    <div class="swatches">
+                        <span style="background:#7e9b76"></span>
+                        <span style="background:#f6f4ee"></span>
+                        <span style="background:#c08a6a"></span>
+                        <span style="background:#2f342b"></span>
+                    </div>
+                    <p class="desc">Calm, organic and breathable — sage greens, soft shapes and a wellness mood.</p>
+                    <ul class="feats">
+                        <li><i class="fa-solid fa-check"></i> Asymmetric organic hero</li>
+                        <li><i class="fa-solid fa-check"></i> Sidebar booking on contact</li>
+                        <li><i class="fa-solid fa-check"></i> Light default + forest mode</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="btn btn-fill" href="template-sage/index.html"><i class="fa-solid fa-eye"></i> View template</a>
+                        <a class="btn btn-out" href="template-sage/index.html" target="_blank" rel="noopener" aria-label="Open in new tab"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="note">
+        <div class="wrap">
+            Pick the one you like and keep its folder (e.g. <code>template-sage/</code>) — or ask to merge a favourite into the site root.
+            <br><br>
+            Fonts under the SIL Open Font License · Icons by
+            <a href="https://fontawesome.com" target="_blank" rel="noopener" style="color:#d8b87a">Font Awesome</a>
+            (CC BY 4.0) · Photos from
+            <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:#d8b87a">Unsplash</a>.
+            See <a href="CREDITS.md" style="color:#d8b87a">CREDITS.md</a> for licenses and a pre‑publish checklist.
+        </div>
+    </footer>
+</body>
+
+</html>

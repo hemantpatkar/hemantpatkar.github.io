@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interior Styling Services — Maison Decor</title>
+    <meta name="description" content="From a single styling consultation to whole-home design projects — Maison Decor's interior styling services, process and pricing.">
+    <meta name="theme-color" content="#bf6240">
+    <meta property="og:title" content="Interior Styling Services — Maison Decor">
+    <meta property="og:description" content="Styling consultations, full room design and whole-home projects.">
+    <meta property="og:image" content="assets/img/og-image.svg">
+
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.className += " js";
+            try {
+                var t = localStorage.getItem("theme");
+                var m = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (t === "dark" || (!t && m)) d.classList.add("dark-mode");
+                try { var st = localStorage.getItem("site-theme"); if (st) d.setAttribute("data-theme", st); } catch (e2) {}
+            } catch (e) { }
+        })();
+    </script>
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="assets/img/icon-512.svg">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+
+<body>
+    <header class="site-header" id="siteHeader">
+        <nav class="container nav-inner" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">Maison Decor<small>Home Decor &amp; Styling</small></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="products.html">Shop</a></li>
+                <li><a class="nav-link active" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link nav-cta" href="contact.html">Get a Quote</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-head">
+            <div class="container">
+                <p class="breadcrumb"><a href="index.html">Home</a> / Services</p>
+                <h1 class="page-title">Interior Styling Services</h1>
+                <p class="page-sub">Whether you need a second opinion or a full transformation, our stylists design spaces that feel warm, considered and unmistakably yours.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="svc-grid">
+                    <div class="svc-card reveal">
+                        <span class="svc-icon"><i class="fa-solid fa-comments"></i></span>
+                        <h3>Styling Consultation</h3>
+                        <p>A 90-minute in-home or virtual session to assess your space and leave you with a clear, actionable styling plan.</p>
+                        <ul class="svc-points">
+                            <li><i class="fa-solid fa-check"></i> Layout &amp; flow review</li>
+                            <li><i class="fa-solid fa-check"></i> Colour &amp; material direction</li>
+                            <li><i class="fa-solid fa-check"></i> Quick-win shopping list</li>
+                        </ul>
+                        <p class="svc-price">From $120</p>
+                    </div>
+                    <div class="svc-card reveal d1">
+                        <span class="svc-icon"><i class="fa-solid fa-couch"></i></span>
+                        <h3>Full Room Design</h3>
+                        <p>End-to-end design for a single room — concept to styled reality, managed by your dedicated stylist.</p>
+                        <ul class="svc-points">
+                            <li><i class="fa-solid fa-check"></i> Mood board &amp; concept</li>
+                            <li><i class="fa-solid fa-check"></i> Curated product list</li>
+                            <li><i class="fa-solid fa-check"></i> On-site styling day</li>
+                        </ul>
+                        <p class="svc-price">From $850</p>
+                    </div>
+                    <div class="svc-card reveal d2">
+                        <span class="svc-icon"><i class="fa-solid fa-house-chimney-window"></i></span>
+                        <h3>Whole-Home Project</h3>
+                        <p>A cohesive scheme across every room, with project management from first concept to final touches.</p>
+                        <ul class="svc-points">
+                            <li><i class="fa-solid fa-check"></i> Multi-room concept</li>
+                            <li><i class="fa-solid fa-check"></i> Sourcing &amp; procurement</li>
+                            <li><i class="fa-solid fa-check"></i> Full install &amp; styling</li>
+                        </ul>
+                        <p class="svc-price">Custom quote</p>
+                    </div>
+                    <div class="svc-card reveal">
+                        <span class="svc-icon"><i class="fa-solid fa-palette"></i></span>
+                        <h3>Colour &amp; Material Scheme</h3>
+                        <p>A curated palette of paints, finishes and fabrics so every choice in your home works in harmony.</p>
+                        <ul class="svc-points">
+                            <li><i class="fa-solid fa-check"></i> Paint &amp; finish selection</li>
+                            <li><i class="fa-solid fa-check"></i> Fabric &amp; texture pairing</li>
+                            <li><i class="fa-solid fa-check"></i> Printable spec sheet</li>
+                        </ul>
+                        <p class="svc-price">From $260</p>
+                    </div>
+                    <div class="svc-card reveal d1">
+                        <span class="svc-icon"><i class="fa-solid fa-gift"></i></span>
+                        <h3>Gifting &amp; Registry</h3>
+                        <p>Personal shopping for housewarmings, weddings and seasonal gifting — beautifully wrapped and delivered.</p>
+                        <ul class="svc-points">
+                            <li><i class="fa-solid fa-check"></i> Curated gift selection</li>
+                            <li><i class="fa-solid fa-check"></i> Gift wrapping &amp; note</li>
+                            <li><i class="fa-solid fa-check"></i> Direct delivery</li>
+                        </ul>
+                        <p class="svc-price">From $40</p>
+                    </div>
+                    <div class="svc-card reveal d2">
+                        <span class="svc-icon"><i class="fa-solid fa-store"></i></span>
+                        <h3>Commercial &amp; Staging</h3>
+                        <p>Decor and styling for cafés, boutiques and property staging that makes spaces feel inviting and sell faster.</p>
+                        <ul class="svc-points">
+                            <li><i class="fa-solid fa-check"></i> Brand-aligned styling</li>
+                            <li><i class="fa-solid fa-check"></i> Rental decor options</li>
+                            <li><i class="fa-solid fa-check"></i> Fast turnaround</li>
+                        </ul>
+                        <p class="svc-price">Custom quote</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">How it works</span>
+                    <h2 class="section-title">A simple, four-step process</h2>
+                    <p class="section-sub">No overwhelm, no surprises — just a clear path from idea to a home you love.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step reveal">
+                        <span class="process-num">1</span>
+                        <h4>Discover</h4>
+                        <p>We talk through your space, lifestyle, budget and the feeling you want to create.</p>
+                    </div>
+                    <div class="process-step reveal d1">
+                        <span class="process-num">2</span>
+                        <h4>Design</h4>
+                        <p>You receive mood boards, layouts and a curated product list tailored to you.</p>
+                    </div>
+                    <div class="process-step reveal d2">
+                        <span class="process-num">3</span>
+                        <h4>Source</h4>
+                        <p>We order, track and coordinate everything so you don't have to lift a finger.</p>
+                    </div>
+                    <div class="process-step reveal d3">
+                        <span class="process-num">4</span>
+                        <h4>Style</h4>
+                        <p>On install day we place every piece, step back, and hand you a room that's ready to enjoy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container split reverse">
+                <div class="frame reveal"><img src="assets/img/studio.jpg" alt="Stylist arranging a decorated shelf" width="800" height="640"></div>
+                <div class="split-text reveal d1">
+                    <span class="eyebrow">Why Maison Decor</span>
+                    <h2 class="section-title">Design that respects your budget and your time</h2>
+                    <p>We're product-led, which means every recommendation comes with a real piece you can buy — no vague concepts you can't act on.</p>
+                    <ul class="tick-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Transparent, fixed-fee packages</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Access to trade-only suppliers</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Stylists who actually listen</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Decor available the same day</li>
+                    </ul>
+                    <a class="btn-primary" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Request a quote</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band reveal">
+            <div class="container">
+                <h2>Ready to fall in love with your home again?</h2>
+                <p>Tell us about your space and we'll recommend the right service for your goals and budget.</p>
+                <div class="cta-actions">
+                    <a class="btn-primary" href="booking.html"><i class="fa-solid fa-calendar-check"></i> Book a consult</a>
+                    <a class="btn-ghost" href="gallery.html"><i class="fa-solid fa-images"></i> See our work</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">M</span>
+                    <span class="brand-name">Maison Decor<small>Home Decor &amp; Styling</small></span>
+                </a>
+                <p class="footer-tag">Curated home decor and interior styling for warm, characterful homes.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?cat=living">Living Room</a></li>
+                    <li><a href="products.html?cat=lighting">Lighting</a></li>
+                    <li><a href="products.html?cat=textiles">Textiles</a></li>
+                    <li><a href="products.html?cat=dining">Dining</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="contact.html">Shipping &amp; returns</a></li>
+                    <li><a href="contact.html">Care guide</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <span>&copy; <span id="year">2026</span> Maison Decor. All rights reserved.</span>
+                <span>Crafted with care · Demo placeholder content</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

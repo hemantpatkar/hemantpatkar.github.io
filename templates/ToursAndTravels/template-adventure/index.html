@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summit — Adventure Travel</title>
+  <meta name="description" content="Summit — a bold, dark adventure travel template." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { lime: { DEFAULT: '#a3e635', dark: '#84cc16' }, stone: { 950: '#0c0a09' } },
+      fontFamily: { display: ['"Bebas Neue"', 'sans-serif'], sans: ['"Barlow"', 'sans-serif'] },
+    } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; }
+    .font-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .02em; }
+    .img-zoom-wrap { overflow: hidden; }
+    .img-zoom { transition: transform .8s ease; }
+    .img-zoom-wrap:hover .img-zoom { transform: scale(1.1); }
+  </style>
+</head>
+<body class="bg-stone-950 text-stone-200 antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-stone-950/70 backdrop-blur border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="#home" class="font-display text-3xl text-white">SUM<span class="text-lime">MIT</span></a>
+      <ul class="hidden md:flex items-center gap-9 text-sm font-medium uppercase tracking-wider text-stone-300">
+        <li><a href="#home" class="hover:text-lime transition">Home</a></li>
+        <li><a href="#packages" class="hover:text-lime transition">Expeditions</a></li>
+        <li><a href="#destinations" class="hover:text-lime transition">Terrain</a></li>
+        <li><a href="#about" class="hover:text-lime transition">Crew</a></li>
+        <li><a href="#contact" class="hover:text-lime transition">Contact</a></li>
+      </ul>
+      <a href="#contact" class="hidden md:inline-block bg-lime hover:bg-lime-dark text-stone-950 font-semibold text-sm uppercase tracking-wider px-6 py-2.5 rounded transition">Book Expedition</a>
+      <button id="mb" class="md:hidden text-2xl text-white"><i class="ri-menu-line"></i></button>
+    </nav>
+    <div id="mm" class="hidden md:hidden border-t border-white/10 px-6 py-4 uppercase text-sm tracking-wider">
+      <ul class="flex flex-col gap-4 text-stone-300">
+        <li><a href="#home">Home</a></li><li><a href="#packages">Expeditions</a></li>
+        <li><a href="#destinations">Terrain</a></li><li><a href="#about">Crew</a></li><li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative h-screen min-h-[640px] flex items-end">
+    <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=2000&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Mountain expedition" />
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/30"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-20 w-full">
+      <p class="text-lime font-semibold uppercase tracking-[0.3em] text-sm mb-4">Go where it's wild</p>
+      <h1 class="font-display text-6xl sm:text-8xl lg:text-[9rem] leading-[0.9] text-white max-w-4xl">CHASE THE<br />HORIZON</h1>
+      <p class="text-stone-300 text-lg max-w-xl mt-6">Guided expeditions for those who'd rather climb it than look at it. Real terrain. Real crews. No tourist traps.</p>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="#packages" class="bg-lime hover:bg-lime-dark text-stone-950 font-semibold uppercase tracking-wider px-8 py-4 rounded transition">See Expeditions</a>
+        <a href="#about" class="border border-white/30 hover:border-lime text-white uppercase tracking-wider px-8 py-4 rounded transition">Meet the Crew</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats strip -->
+  <section class="bg-lime text-stone-950">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><p class="font-display text-5xl">48</p><p class="uppercase text-xs tracking-widest font-semibold">Peaks Summited</p></div>
+      <div><p class="font-display text-5xl">120+</p><p class="uppercase text-xs tracking-widest font-semibold">Routes</p></div>
+      <div><p class="font-display text-5xl">15K</p><p class="uppercase text-xs tracking-widest font-semibold">Adventurers</p></div>
+      <div><p class="font-display text-5xl">100%</p><p class="uppercase text-xs tracking-widest font-semibold">Safe Returns</p></div>
+    </div>
+  </section>
+
+  <!-- Expeditions -->
+  <section id="packages" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-lime font-semibold uppercase tracking-[0.3em] text-sm mb-3">The expeditions</p>
+      <h2 class="font-display text-5xl sm:text-6xl text-white mb-12">Pick your battle</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="group relative img-zoom-wrap rounded-lg h-[480px]">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=700&q=80" class="img-zoom w-full h-full object-cover" alt="Alps">
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 p-7">
+            <span class="text-lime uppercase text-xs tracking-widest font-semibold">6 Days · Hard</span>
+            <h3 class="font-display text-4xl text-white mt-2">Alpine Assault</h3>
+            <p class="text-stone-300 text-sm mt-2 mb-4">Crampons on. Ridgelines, glaciers, and a summit you'll feel for weeks.</p>
+            <p class="text-white font-semibold">$2,100 <span class="text-stone-400 font-normal">/ person</span></p>
+          </div>
+        </article>
+        <article class="group relative img-zoom-wrap rounded-lg h-[480px]">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=700&q=80" class="img-zoom w-full h-full object-cover" alt="Desert">
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 p-7">
+            <span class="text-lime uppercase text-xs tracking-widest font-semibold">5 Days · Medium</span>
+            <h3 class="font-display text-4xl text-white mt-2">Desert Crossing</h3>
+            <p class="text-stone-300 text-sm mt-2 mb-4">Dunes, star-fields, and silence so big it echoes.</p>
+            <p class="text-white font-semibold">$1,450 <span class="text-stone-400 font-normal">/ person</span></p>
+          </div>
+        </article>
+        <article class="group relative img-zoom-wrap rounded-lg h-[480px]">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80" class="img-zoom w-full h-full object-cover" alt="Trek">
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 p-7">
+            <span class="text-lime uppercase text-xs tracking-widest font-semibold">8 Days · Extreme</span>
+            <h3 class="font-display text-4xl text-white mt-2">Jungle Trek</h3>
+            <p class="text-stone-300 text-sm mt-2 mb-4">Machete paths, hidden falls, and nights under the canopy.</p>
+            <p class="text-white font-semibold">$1,980 <span class="text-stone-400 font-normal">/ person</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terrain -->
+  <section id="destinations" class="py-24 px-6 bg-stone-900">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-lime font-semibold uppercase tracking-[0.3em] text-sm mb-3">The terrain</p>
+      <h2 class="font-display text-5xl sm:text-6xl text-white mb-12">Where we roam</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="img-zoom-wrap rounded-lg h-72 relative"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Patagonia"><div class="absolute inset-0 bg-stone-950/30"></div><span class="absolute bottom-4 left-4 font-display text-2xl text-white">Patagonia</span></div>
+        <div class="img-zoom-wrap rounded-lg h-72 relative"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Nepal"><div class="absolute inset-0 bg-stone-950/30"></div><span class="absolute bottom-4 left-4 font-display text-2xl text-white">Nepal</span></div>
+        <div class="img-zoom-wrap rounded-lg h-72 relative"><img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Iceland"><div class="absolute inset-0 bg-stone-950/30"></div><span class="absolute bottom-4 left-4 font-display text-2xl text-white">Iceland</span></div>
+        <div class="img-zoom-wrap rounded-lg h-72 relative"><img src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=500&q=80" class="img-zoom w-full h-full object-cover" alt="Sahara"><div class="absolute inset-0 bg-stone-950/30"></div><span class="absolute bottom-4 left-4 font-display text-2xl text-white">Sahara</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crew / About -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="text-lime font-semibold uppercase tracking-[0.3em] text-sm mb-3">The crew</p>
+        <h2 class="font-display text-5xl sm:text-6xl text-white mb-6">Led by people who live out here</h2>
+        <p class="text-stone-400 leading-relaxed mb-4">Every Summit expedition is run by certified mountain and wilderness guides — not influencers. They've logged the routes, read the weather, and brought everyone home.</p>
+        <p class="text-stone-400 leading-relaxed mb-8">Small groups. Big respect for the land. Zero shortcuts on safety.</p>
+        <div class="flex gap-8">
+          <div><p class="font-display text-4xl text-lime">12</p><p class="uppercase text-xs tracking-widest text-stone-400">Years out there</p></div>
+          <div><p class="font-display text-4xl text-lime">30</p><p class="uppercase text-xs tracking-widest text-stone-400">Certified guides</p></div>
+        </div>
+      </div>
+      <div class="img-zoom-wrap rounded-2xl h-[460px]"><img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=900&q=80" class="img-zoom w-full h-full object-cover" alt="Guides"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6 bg-stone-900">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-lime font-semibold uppercase tracking-[0.3em] text-sm mb-3">Ready?</p>
+      <h2 class="font-display text-5xl sm:text-6xl text-white mb-4">Lock in your expedition</h2>
+      <p class="text-stone-400 mb-10">Drop your details. A guide will reach out with routes and dates.</p>
+      <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('ok').classList.remove('hidden');" class="grid sm:grid-cols-2 gap-4 text-left">
+        <input required placeholder="Name" class="bg-stone-950 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-lime text-white" />
+        <input required type="email" placeholder="Email" class="bg-stone-950 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-lime text-white" />
+        <textarea placeholder="Which expedition?" rows="3" class="sm:col-span-2 bg-stone-950 border border-white/10 rounded px-4 py-3 focus:outline-none focus:border-lime text-white"></textarea>
+        <button class="sm:col-span-2 bg-lime hover:bg-lime-dark text-stone-950 font-semibold uppercase tracking-wider py-4 rounded transition">Send It</button>
+        <p id="ok" class="hidden sm:col-span-2 text-center text-lime">Got it — a guide will be in touch.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 px-6 text-center text-sm text-stone-500 border-t border-white/10">
+    <p class="font-display text-2xl text-white mb-2">SUM<span class="text-lime">MIT</span></p>
+    <p class="mb-2"><a href="privacy.html" class="hover:text-lime">Privacy Policy</a> · <a href="terms.html" class="hover:text-lime">Terms of Service</a></p>
+    © <span id="yr"></span> Summit Expeditions. An adventure template.
+  </footer>
+
+  <script>
+    document.getElementById('mb').onclick = () => document.getElementById('mm').classList.toggle('hidden');
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

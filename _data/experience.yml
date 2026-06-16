@@ -2,36 +2,39 @@
   role: Solution Architect
   period: March 2025 - Present
   points:
-    - Architecting solutions on Microsoft technologies and Azure Cloud for a client in the fund-accounting domain.
-    - Leading solution design and technical direction across the .NET and Azure stack.
+    - Own end-to-end solution architecture for a fund-accounting client, designing scalable systems on Microsoft .NET and Azure.
+    - Define technical direction, cloud architecture, and engineering standards across the .NET and Azure stack.
+    - Partner with stakeholders and delivery teams to align architecture with business goals and timelines.
 - company: Encora
   role: Technical Lead
   period: July 2024 - March 2025
   points:
-    - Led development of a healthcare product built on the .NET stack.
-    - Provided technical direction and mentoring to the engineering team as Technical Lead.
+    - Led development of a healthcare product on the .NET stack, driving architecture, code quality, and delivery across the team.
+    - Mentored engineers and set technical direction, improving delivery consistency and velocity.
+    - Collaborated with cross-functional teams to ship features within a regulated healthcare domain.
 - company: Capgemini
   role: Application Architect (Manager)
   period: March 2021 - June 2024
   points:
-    - Built a total talent-management platform on a microservices architecture in .NET Core and Angular, deployed to Google Cloud.
-    - Designed a background worker process to synchronise data between the application and SAP.
-    - Drove delivery on Azure DevOps — managing work items and shipping through CI/CD pipelines.
+    - Architected and delivered a total talent-management platform on a microservices architecture in .NET Core and Angular, hosted on Google Cloud.
+    - Designed a background worker service to synchronise data between the application and SAP, ensuring integrity across systems.
+    - Established CI/CD pipelines and work-item management on Azure DevOps, streamlining releases.
+    - Led architecture decisions and mentored developers as Manager.
 - company: Ingram Micro
   role: Senior Software Engineer
   period: Nov 2016 - March 2021
   points:
-    - Implemented enterprise single sign-on for e-commerce and mobile using Okta with OpenID Connect (OIDC).
-    - Built a Profile API microservice in ASP.NET Core, using Okta inline tokens with SAML to serve user information to client applications.
-    - Delivered an e-commerce shopping platform with back-office, SAP, and Impulse integration (MVC / Web API / WCF).
-    - Built the Cisco Vendor Portal on an MVC n-layer architecture with supporting APIs.
+    - Implemented enterprise Single Sign-On for e-commerce and mobile using Okta (OIDC), enabling secure, seamless logins across the enterprise.
+    - Built a Profile API microservice in ASP.NET Core using Okta inline tokens with SAML to serve user identity to client applications.
+    - Delivered a large-scale e-commerce platform with back-office, SAP, and Impulse integration (MVC / Web API / WCF).
+    - Developed the Cisco Vendor Portal on an MVC n-layer architecture with supporting APIs.
     - Practised agile delivery with Jira across all projects.
 - company: BigSun Technologies
   role: Team Lead
   period: Nov 2012 - March 2016
   points:
-    - Built a warehousing system with integrated financials (C#.NET and SQL).
-    - Developed an online support portal and ticketing system (C# ASP.NET and SQL).
-    - Engineered an ERP spanning finance, stock, and production with strong object-oriented design in C#.NET.
+    - Led a team building enterprise products across finance, warehousing, and HR domains in C#.NET and SQL.
+    - Engineered an ERP spanning finance, stock, and production with strong object-oriented design.
+    - Built a warehousing system with integrated financials and an online support & ticketing portal.
+    - Delivered an HRM system with mobile-app integration via web services.
     - Migrated and upgraded legacy systems on MS SQL Server without data loss.
-    - Built a Human Resource Management system with mobile app integration (C# ASP.NET and Web Services).

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book a Consultation — Maison Decor</title>
+    <meta name="description" content="Book an interior styling consultation with Maison Decor — pick a date and time and tell us about your space.">
+    <meta name="theme-color" content="#bf6240">
+    <meta property="og:title" content="Book a Consultation — Maison Decor">
+    <meta property="og:description" content="Schedule an interior styling consultation with Maison Decor.">
+    <meta property="og:image" content="assets/img/og-image.svg">
+
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.className += " js";
+            try {
+                var t = localStorage.getItem("theme");
+                var m = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (t === "dark" || (!t && m)) d.classList.add("dark-mode");
+                try { var st = localStorage.getItem("site-theme"); if (st) d.setAttribute("data-theme", st); } catch (e2) {}
+            } catch (e) { }
+        })();
+    </script>
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="assets/img/icon-512.svg">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+
+<body>
+    <header class="site-header" id="siteHeader">
+        <nav class="container nav-inner" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">Maison Decor<small>Home Decor &amp; Styling</small></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="products.html">Shop</a></li>
+                <li><a class="nav-link active" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link nav-cta" href="contact.html">Get a Quote</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-head">
+            <div class="container">
+                <p class="breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / Book</p>
+                <h1 class="page-title">Book a Consultation</h1>
+                <p class="page-sub">Pick a date and time that suits you and tell us a little about your space — we'll confirm by email within one business day.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-form-wrap reveal">
+                    <form id="booking-form" data-web3form data-success="Thank you! Your booking request has been sent — we'll confirm your slot by email shortly." novalidate>
+                        <!-- Web3Forms: replace with your own access key from https://web3forms.com -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New consultation booking — Maison Decor">
+                        <input type="hidden" name="from_name" value="Maison Decor Website">
+                        <input type="checkbox" name="botcheck" tabindex="-1" style="display:none" aria-hidden="true">
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label class="form-label" for="bname">Name</label>
+                                <input class="form-control" id="bname" name="name" type="text" placeholder="Jane Doe" required>
+                            </div>
+                            <div class="field">
+                                <label class="form-label" for="bemail">Email</label>
+                                <input class="form-control" id="bemail" name="email" type="email" placeholder="jane@example.com" required>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label class="form-label" for="bphone">Phone</label>
+                                <input class="form-control" id="bphone" name="phone" type="tel" placeholder="+1 (503) 555-0142">
+                            </div>
+                            <div class="field">
+                                <label class="form-label" for="bservice">Service</label>
+                                <select class="form-control" id="bservice" name="service">
+                                    <option>Styling Consultation</option>
+                                    <option>Full Room Design</option>
+                                    <option>Whole-Home Project</option>
+                                    <option>Colour &amp; Material Scheme</option>
+                                    <option>Commercial / Staging</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label class="form-label" for="bdate">Preferred date</label>
+                                <input class="form-control" id="bdate" name="preferred_date" type="date" required>
+                            </div>
+                            <div class="field">
+                                <label class="form-label" for="btime">Preferred time</label>
+                                <select class="form-control" id="btime" name="preferred_time">
+                                    <option>Morning (10am – 12pm)</option>
+                                    <option>Early afternoon (12pm – 3pm)</option>
+                                    <option>Late afternoon (3pm – 6pm)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="form-label" for="bformat">Format</label>
+                            <select class="form-control" id="bformat" name="format">
+                                <option>In-home (within Portland metro)</option>
+                                <option>Virtual (video call)</option>
+                                <option>In-studio</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label class="form-label" for="bmessage">Tell us about your space</label>
+                            <textarea class="form-control" id="bmessage" name="message" placeholder="Which rooms, your goals, budget range, timeline…"></textarea>
+                        </div>
+                        <button class="btn-primary" type="submit"><i class="fa-solid fa-calendar-check"></i> Request booking</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <aside class="contact-aside">
+                    <div class="info-card reveal d1">
+                        <h3>What to expect</h3>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-clock"></i> <span>Consultations run 60–90 minutes</span></li>
+                            <li><i class="fa-solid fa-list-check"></i> <span>You'll leave with a clear styling plan</span></li>
+                            <li><i class="fa-solid fa-tag"></i> <span>From $120 — credited to any project you book</span></li>
+                            <li><i class="fa-solid fa-rotate-left"></i> <span>Free to reschedule up to 24h before</span></li>
+                        </ul>
+                    </div>
+                    <div class="info-card reveal d2">
+                        <h3>Prefer to talk first?</h3>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hello@maisondecor.example">hello@maisondecor.example</a></li>
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+15035550142">+1 (503) 555-0142</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">M</span>
+                    <span class="brand-name">Maison Decor<small>Home Decor &amp; Styling</small></span>
+                </a>
+                <p class="footer-tag">Curated home decor and interior styling for warm, characterful homes.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?cat=living">Living Room</a></li>
+                    <li><a href="products.html?cat=lighting">Lighting</a></li>
+                    <li><a href="products.html?cat=textiles">Textiles</a></li>
+                    <li><a href="products.html?cat=dining">Dining</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="booking.html">Book a consult</a></li>
+                    <li><a href="contact.html">Shipping &amp; returns</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <span>&copy; <span id="year">2026</span> Maison Decor. All rights reserved.</span>
+                <span>Crafted with care · Demo placeholder content</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

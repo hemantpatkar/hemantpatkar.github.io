@@ -1,0 +1,14 @@
+{
+  "name": "Maison Decor — Home Decor & Styling",
+  "short_name": "Maison Decor",
+  "description": "Curated home decor and interior styling for warm, characterful homes.",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f7f3ee",
+  "theme_color": "#bf6240",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

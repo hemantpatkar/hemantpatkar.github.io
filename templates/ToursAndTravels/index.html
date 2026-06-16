@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelKit — Premium Tours &amp; Travel Templates</title>
+  <meta name="description" content="A collection of beautifully designed, ready-to-use tours & travel website templates. Pick a style and launch in minutes." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { DEFAULT: '#6366f1', dark: '#4f46e5' }, ink: '#0b1020' },
+      fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+    } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .grad-text { background: linear-gradient(90deg,#818cf8,#c084fc,#f472b6); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .grad-bg { background:
+        radial-gradient(800px circle at 15% 10%, rgba(99,102,241,.25), transparent 40%),
+        radial-gradient(700px circle at 85% 20%, rgba(236,72,153,.20), transparent 40%); }
+    .preview-card:hover .preview-img { transform: scale(1.05); }
+    .preview-img { transition: transform .6s ease; }
+    @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .floaty { animation: floaty 5s ease-in-out infinite; }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity:1; transform:none; }
+  </style>
+</head>
+<body class="bg-ink text-slate-200 antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-ink/70 border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 py-4">
+      <a href="#top" class="flex items-center gap-2 text-xl font-extrabold text-white">
+        <i class="ri-compass-3-line text-brand text-2xl"></i> Travel<span class="grad-text">Kit</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <li><a href="#templates" class="hover:text-white transition">Templates</a></li>
+        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+        <li><a href="#how" class="hover:text-white transition">How it works</a></li>
+      </ul>
+      <a href="#templates" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">
+        Browse Templates <i class="ri-arrow-right-line"></i>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative grad-bg pt-36 pb-24 px-6 overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <span class="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-slate-300 text-sm px-4 py-1.5 rounded-full mb-8 reveal">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 4 ready-to-use designs
+      </span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] reveal">
+        Launch a stunning <span class="grad-text">travel website</span> in minutes
+      </h1>
+      <p class="text-lg text-slate-400 mt-7 max-w-2xl mx-auto reveal">
+        A curated collection of tours &amp; travel templates — vibrant, minimal, adventurous, or luxurious. Pick a style, customize, and go live.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10 reveal">
+        <a href="#templates" class="bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-full font-semibold transition inline-flex items-center justify-center gap-2">
+          Explore Templates <i class="ri-layout-grid-line"></i>
+        </a>
+        <a href="template-vibrant/index.html" class="bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-full font-semibold transition">
+          View Live Demo
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-8 mt-12 text-sm text-slate-400 reveal">
+        <span class="inline-flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> 100% responsive</span>
+        <span class="inline-flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> No build step</span>
+        <span class="inline-flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> Free to use</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates -->
+  <section id="templates" class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-14 reveal">
+        <p class="text-brand font-semibold uppercase tracking-widest text-sm">The collection</p>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3">Four designs. One purpose.</h2>
+        <p class="text-slate-400 mt-4">Each template is fully built and ready to preview. Open any one to explore the full site.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Vibrant -->
+        <article class="preview-card group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-brand/50 transition reveal">
+          <a href="template-vibrant/index.html" class="block">
+            <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" class="preview-img w-full h-full object-cover" alt="Vibrant template"></div>
+          </a>
+          <div class="p-7">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="bg-orange-500/15 text-orange-400 text-xs font-semibold px-3 py-1 rounded-full">Vibrant</span>
+              <span class="bg-white/5 text-slate-400 text-xs px-3 py-1 rounded-full">Multi-page</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Wanderlust</h3>
+            <p class="text-slate-400 mt-2 mb-5">Bold orange &amp; pink energy across a full multi-page site — Home, Packages, Destinations, and About.</p>
+            <a href="template-vibrant/index.html" class="inline-flex items-center gap-2 text-orange-400 font-semibold hover:gap-3 transition-all">Open template <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </article>
+
+        <!-- Minimal -->
+        <article class="preview-card group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-brand/50 transition reveal">
+          <a href="template-minimal/index.html" class="block">
+            <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" class="preview-img w-full h-full object-cover" alt="Minimal template"></div>
+          </a>
+          <div class="p-7">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="bg-teal-500/15 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full">Minimal</span>
+              <span class="bg-white/5 text-slate-400 text-xs px-3 py-1 rounded-full">Single-page</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Voyage</h3>
+            <p class="text-slate-400 mt-2 mb-5">Clean whitespace, elegant serif headings, and a calm teal accent. Understated and refined.</p>
+            <a href="template-minimal/index.html" class="inline-flex items-center gap-2 text-teal-300 font-semibold hover:gap-3 transition-all">Open template <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </article>
+
+        <!-- Adventure -->
+        <article class="preview-card group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-brand/50 transition reveal">
+          <a href="template-adventure/index.html" class="block">
+            <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80" class="preview-img w-full h-full object-cover" alt="Adventure template"></div>
+          </a>
+          <div class="p-7">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="bg-lime-500/15 text-lime-300 text-xs font-semibold px-3 py-1 rounded-full">Adventure</span>
+              <span class="bg-white/5 text-slate-400 text-xs px-3 py-1 rounded-full">Single-page</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Summit</h3>
+            <p class="text-slate-400 mt-2 mb-5">Dark, bold, and rugged. Condensed display type with a punchy lime accent for adventure brands.</p>
+            <a href="template-adventure/index.html" class="inline-flex items-center gap-2 text-lime-300 font-semibold hover:gap-3 transition-all">Open template <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </article>
+
+        <!-- Luxury -->
+        <article class="preview-card group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-brand/50 transition reveal">
+          <a href="template-luxury/index.html" class="block">
+            <div class="h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" class="preview-img w-full h-full object-cover" alt="Luxury template"></div>
+          </a>
+          <div class="p-7">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="bg-amber-500/15 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full">Luxury</span>
+              <span class="bg-white/5 text-slate-400 text-xs px-3 py-1 rounded-full">Single-page</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Élan Voyages</h3>
+            <p class="text-slate-400 mt-2 mb-5">Navy &amp; gold sophistication with classic serif type. A quiet, high-end feel for premium travel.</p>
+            <a href="template-luxury/index.html" class="inline-flex items-center gap-2 text-amber-300 font-semibold hover:gap-3 transition-all">Open template <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-6 border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-14 reveal">
+        <p class="text-brand font-semibold uppercase tracking-widest text-sm">Why TravelKit</p>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3">Everything you need to launch</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center text-2xl mb-4"><i class="ri-smartphone-line"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Fully Responsive</h3>
+          <p class="text-slate-400 text-sm">Looks flawless on phones, tablets, and desktops, with a working mobile menu on every page.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center text-2xl mb-4"><i class="ri-flashlight-line"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">No Build Step</h3>
+          <p class="text-slate-400 text-sm">Pure HTML + Tailwind via CDN. Open in a browser or drop on any static host instantly.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center text-2xl mb-4"><i class="ri-palette-line"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Easy to Customize</h3>
+          <p class="text-slate-400 text-sm">Swap colors, fonts, images, and copy with simple, well-organized markup.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center text-2xl mb-4"><i class="ri-magic-line"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Smooth Animations</h3>
+          <p class="text-slate-400 text-sm">Scroll reveals, hover zooms, and sticky navs come built in — no extra libraries.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center text-2xl mb-4"><i class="ri-mail-send-line"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Contact Forms</h3>
+          <p class="text-slate-400 text-sm">Each template includes a styled contact form ready to wire to your backend.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-xl bg-brand/20 text-brand flex items-center justify-center text-2xl mb-4"><i class="ri-seo-line"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">SEO Friendly</h3>
+          <p class="text-slate-400 text-sm">Semantic markup with meta titles and descriptions on every template.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-20 px-6 border-t border-white/10">
+    <div class="max-w-5xl mx-auto">
+      <div class="max-w-2xl mx-auto text-center mb-14 reveal">
+        <p class="text-brand font-semibold uppercase tracking-widest text-sm">Get started</p>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3">Live in three steps</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div class="text-center reveal">
+          <div class="w-14 h-14 mx-auto rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mb-5">1</div>
+          <h3 class="text-lg font-bold text-white mb-2">Pick a template</h3>
+          <p class="text-slate-400 text-sm">Browse the four styles and open the one that fits your brand.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-14 h-14 mx-auto rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mb-5">2</div>
+          <h3 class="text-lg font-bold text-white mb-2">Customize it</h3>
+          <p class="text-slate-400 text-sm">Replace the images, text, and colors with your own details.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-14 h-14 mx-auto rounded-full bg-brand text-white flex items-center justify-center text-xl font-bold mb-5">3</div>
+          <h3 class="text-lg font-bold text-white mb-2">Publish</h3>
+          <p class="text-slate-400 text-sm">Upload to GitHub Pages, Netlify, or any host — done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto grad-bg border border-white/10 rounded-3xl p-12 text-center reveal">
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Ready to find your style?</h2>
+      <p class="text-slate-300 mt-4 max-w-xl mx-auto">Open any template and see it live. Your next travel website is one click away.</p>
+      <a href="#templates" class="inline-flex items-center gap-2 mt-8 bg-brand hover:bg-brand-dark text-white px-9 py-4 rounded-full font-semibold transition">
+        Browse All Templates <i class="ri-arrow-up-line rotate-45"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-2 text-lg font-extrabold text-white"><i class="ri-compass-3-line text-brand text-xl"></i> Travel<span class="grad-text">Kit</span></a>
+      <p class="text-slate-500 text-sm">© <span id="yr"></span> TravelKit — Tours &amp; Travels templates.</p>
+      <div class="flex gap-3 text-slate-400">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand hover:text-white flex items-center justify-center transition"><i class="ri-twitter-x-line"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand hover:text-white flex items-center justify-center transition"><i class="ri-github-line"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand hover:text-white flex items-center justify-center transition"><i class="ri-dribbble-line"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // Scroll reveal
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+  </script>
+</body>
+</html>
