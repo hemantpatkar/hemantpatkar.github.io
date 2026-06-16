@@ -4,7 +4,7 @@ title: Voyage — Tours & Travel Template
 domain: Tours & Travel
 tagline: A vibrant template for travel agencies and tour operators, with packages and booking sections.
 price: "$XX"
-image: /assets/img/template-placeholder.svg
+image: /templates/ToursAndTravels/assets/travel-hero.svg
 demo_url: "/templates/ToursAndTravels/"
 buy_url: "#"
 order: 4
