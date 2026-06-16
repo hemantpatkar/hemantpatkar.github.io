@@ -79,7 +79,7 @@ function footer(t) {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 text-center">
       <div class="mb-2">${t.brand}</div>
       <p class="t-muted text-sm">Modern fashion essentials — ${t.label} template.</p>
-      <p class="t-muted text-xs mt-4">© 2026 LUXE · <a href="/index.html" class="underline hover:opacity-70">All templates</a></p>
+      <p class="t-muted text-xs mt-4">© 2026 LUXE · <a href="/templates/FashionEcommerce/index.html" class="underline hover:opacity-70">All templates</a></p>
     </div>
   </footer>`;
 }
@@ -92,14 +92,14 @@ function shell(t, title, body, scripts) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
-  <link rel="stylesheet" href="/dist/styles.css">
+  <link rel="stylesheet" href="/templates/FashionEcommerce/dist/styles.css">
 </head>
 <body class="theme-${t.folder}" data-theme="${t.folder}">
 ${header(t)}
 ${body}
 ${footer(t)}
-  <script src="/js/products.js"></script>
-  <script src="/js/app.js"></script>
+  <script src="/templates/FashionEcommerce/js/products.js"></script>
+  <script src="/templates/FashionEcommerce/js/app.js"></script>
 ${tags}
 </body>
 </html>
@@ -108,7 +108,7 @@ ${tags}
 
 /* ---------------- home bodies (bespoke per theme) ---------------- */
 const catTile = (cat, img, label) =>
-  `<a href="shop.html?cat=${cat}" class="group relative aspect-square t-rounded-lg overflow-hidden"><img src="/images/${img}" alt="${label}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-black/30 flex items-end p-4"><span class="text-white font-semibold text-lg">${label}</span></div></a>`;
+  `<a href="shop.html?cat=${cat}" class="group relative aspect-square t-rounded-lg overflow-hidden"><img src="/templates/FashionEcommerce/images/${img}" alt="${label}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-black/30 flex items-end p-4"><span class="text-white font-semibold text-lg">${label}</span></div></a>`;
 
 const HOME = {
   modern: `
@@ -122,7 +122,7 @@ const HOME = {
         <a href="shop.html?cat=Women" class="t-btn-outline px-7 py-3.5 font-medium">Women's</a>
       </div>
     </div>
-    <div class="aspect-[4/5] t-rounded-lg overflow-hidden t-surface"><img src="/images/hero.jpg" alt="" class="w-full h-full object-cover"></div>
+    <div class="aspect-[4/5] t-rounded-lg overflow-hidden t-surface"><img src="/templates/FashionEcommerce/images/hero.jpg" alt="" class="w-full h-full object-cover"></div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
     <h2 class="t-display text-2xl font-bold mb-8">Shop by Category</h2>
@@ -137,7 +137,7 @@ const HOME = {
 
   luxury: `
   <section class="relative">
-    <img src="/images/hero.jpg" alt="" class="w-full h-[70vh] object-cover">
+    <img src="/templates/FashionEcommerce/images/hero.jpg" alt="" class="w-full h-[70vh] object-cover">
     <div class="absolute inset-0 bg-black/25"></div>
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
       <p class="text-[11px] uppercase tracking-[0.3em] mb-5">The 2026 Collection</p>
@@ -162,7 +162,7 @@ const HOME = {
           <a href="shop.html?cat=Shoes" class="t-btn-outline px-8 py-4 font-bold uppercase tracking-wide">Kicks</a>
         </div>
       </div>
-      <div class="relative"><div class="absolute -inset-2 t-badge"></div><img src="/images/hero.jpg" alt="" class="relative w-full aspect-[4/5] object-cover"></div>
+      <div class="relative"><div class="absolute -inset-2 t-badge"></div><img src="/templates/FashionEcommerce/images/hero.jpg" alt="" class="relative w-full aspect-[4/5] object-cover"></div>
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
@@ -179,7 +179,7 @@ const HOME = {
         <p class="text-white/90 mt-5 text-lg max-w-sm">Colorful drops and everyday faves to brighten your wardrobe.</p>
         <a href="shop.html" class="mt-8 inline-block bg-white text-fuchsia-600 font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-transform">Shop now →</a>
       </div>
-      <img src="/images/hero.jpg" alt="" class="w-full aspect-[4/5] object-cover rounded-[2rem] shadow-2xl">
+      <img src="/templates/FashionEcommerce/images/hero.jpg" alt="" class="w-full aspect-[4/5] object-cover rounded-[2rem] shadow-2xl">
     </div>
   </section>
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
@@ -193,7 +193,7 @@ const HOME = {
     <h1 class="text-4xl md:text-5xl font-normal leading-tight max-w-2xl mx-auto">Considered essentials for a calmer wardrobe.</h1>
     <a href="shop.html" class="mt-10 inline-block text-xs uppercase tracking-[0.25em] border-b border-current pb-1 hover:opacity-60">Shop the collection</a>
   </section>
-  <img src="/images/hero.jpg" alt="" class="w-full h-[60vh] object-cover">
+  <img src="/templates/FashionEcommerce/images/hero.jpg" alt="" class="w-full h-[60vh] object-cover">
   <section class="max-w-5xl mx-auto px-6 py-20">
     <div class="flex items-baseline justify-between mb-12"><h2 class="text-xs uppercase tracking-[0.3em] t-muted">Selected</h2><a href="shop.html" class="text-xs uppercase tracking-[0.2em] t-muted hover:opacity-70">All products</a></div>
     <div id="home-grid" class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-14"></div>
@@ -356,12 +356,12 @@ const CHECKOUT_BODY = `
   </main>`;
 
 const PAGES = [
-  { file: "index.html",    title: t => `${t.label} — LUXE`,  body: t => HOME[t.folder], scripts: ["/js/page-home.js"] },
-  { file: "shop.html",     title: () => "Shop — LUXE",       body: () => SHOP_BODY,     scripts: ["/js/page-shop.js"] },
-  { file: "product.html",  title: () => "Product — LUXE",    body: () => PRODUCT_BODY,  scripts: ["/js/page-product.js"] },
-  { file: "cart.html",     title: () => "Cart — LUXE",       body: () => CART_BODY,     scripts: ["/js/page-cart.js"] },
-  { file: "checkout.html", title: () => "Checkout — LUXE",   body: () => CHECKOUT_BODY, scripts: ["/js/page-checkout.js"] },
-  { file: "wishlist.html", title: () => "Wishlist — LUXE",   body: () => WISHLIST_BODY, scripts: ["/js/page-wishlist.js"] },
+  { file: "index.html",    title: t => `${t.label} — LUXE`,  body: t => HOME[t.folder], scripts: ["/templates/FashionEcommerce/js/page-home.js"] },
+  { file: "shop.html",     title: () => "Shop — LUXE",       body: () => SHOP_BODY,     scripts: ["/templates/FashionEcommerce/js/page-shop.js"] },
+  { file: "product.html",  title: () => "Product — LUXE",    body: () => PRODUCT_BODY,  scripts: ["/templates/FashionEcommerce/js/page-product.js"] },
+  { file: "cart.html",     title: () => "Cart — LUXE",       body: () => CART_BODY,     scripts: ["/templates/FashionEcommerce/js/page-cart.js"] },
+  { file: "checkout.html", title: () => "Checkout — LUXE",   body: () => CHECKOUT_BODY, scripts: ["/templates/FashionEcommerce/js/page-checkout.js"] },
+  { file: "wishlist.html", title: () => "Wishlist — LUXE",   body: () => WISHLIST_BODY, scripts: ["/templates/FashionEcommerce/js/page-wishlist.js"] },
 ];
 
 let count = 0;

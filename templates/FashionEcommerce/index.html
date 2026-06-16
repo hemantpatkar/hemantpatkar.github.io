@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUXE — Fashion Storefront Templates</title>
-  <link rel="stylesheet" href="/dist/styles.css">
+  <link rel="stylesheet" href="/templates/FashionEcommerce/dist/styles.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <header class="border-b border-gray-100 bg-white">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <span class="text-2xl font-bold tracking-tight">LUXE</span>
-      <a href="/admin.html" class="text-sm text-gray-500 hover:text-gray-900">Admin →</a>
+      <a href="/templates/FashionEcommerce/admin.html" class="text-sm text-gray-500 hover:text-gray-900">Admin →</a>
     </div>
   </header>
 
@@ -33,14 +33,14 @@
 
   <script>
     const TEMPLATES = [
-      { folder: "modern",     name: "Modern",     tag: "Default",    img: "/images/dress.jpg",    desc: "Clean, contemporary storefront with category tiles and a featured grid.", accent: "#111827" },
-      { folder: "luxury",     name: "Luxury",     tag: "Elegant",    img: "/images/coat.jpg",     desc: "Serif headings, generous whitespace, muted boutique palette, sharp edges.", accent: "#1c1917" },
-      { folder: "streetwear", name: "Streetwear", tag: "Bold",       img: "/images/boots.jpg",    desc: "Dark theme, oversized type, acid-lime accent, hype energy.",            accent: "#c4f000" },
-      { folder: "playful",    name: "Playful",    tag: "Vibrant",    img: "/images/heels.jpg",    desc: "Gradients, rounded shapes, colorful and friendly.",                     accent: "#db2777" },
-      { folder: "minimal",    name: "Minimal",    tag: "Scandi",     img: "/images/trousers.jpg", desc: "Ultra-clean, airy layout, tiny tracked type, monochrome.",              accent: "#171717" },
+      { folder: "modern",     name: "Modern",     tag: "Default",    img: "/templates/FashionEcommerce/images/dress.jpg",    desc: "Clean, contemporary storefront with category tiles and a featured grid.", accent: "#111827" },
+      { folder: "luxury",     name: "Luxury",     tag: "Elegant",    img: "/templates/FashionEcommerce/images/coat.jpg",     desc: "Serif headings, generous whitespace, muted boutique palette, sharp edges.", accent: "#1c1917" },
+      { folder: "streetwear", name: "Streetwear", tag: "Bold",       img: "/templates/FashionEcommerce/images/boots.jpg",    desc: "Dark theme, oversized type, acid-lime accent, hype energy.",            accent: "#c4f000" },
+      { folder: "playful",    name: "Playful",    tag: "Vibrant",    img: "/templates/FashionEcommerce/images/heels.jpg",    desc: "Gradients, rounded shapes, colorful and friendly.",                     accent: "#db2777" },
+      { folder: "minimal",    name: "Minimal",    tag: "Scandi",     img: "/templates/FashionEcommerce/images/trousers.jpg", desc: "Ultra-clean, airy layout, tiny tracked type, monochrome.",              accent: "#171717" },
     ];
     document.getElementById("gallery").innerHTML = TEMPLATES.map(t => `
-      <a href="/templates/${t.folder}/index.html" class="group block bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
+      <a href="/templates/FashionEcommerce/templates/${t.folder}/templates/FashionEcommerce/index.html" class="group block bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
         <div class="aspect-[4/3] overflow-hidden bg-gray-100">
           <img src="${t.img}" alt="${t.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>

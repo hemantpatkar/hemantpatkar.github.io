@@ -2,7 +2,7 @@
 module.exports = {
   // Scan every page and the shared JS (header + product cards are built there)
   // so dynamically-generated class names are not purged from the build.
-  content: ["./*.html", "./templates/**/*.html", "./js/**/*.js"],
+  content: ["./*.html", "./templates/FashionEcommerce/templates/**/*.html", "./templates/FashionEcommerce/js/**/*.js"],
   theme: {
     extend: {
       fontFamily: {

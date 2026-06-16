@@ -82,5 +82,5 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 
 fs.writeFileSync(path.join(IMG, "template-poster.svg"), svg);
 fs.writeFileSync(path.join(ROOT, "_poster.html"),
-  `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/dist/styles.css"><style>html,body{margin:0;padding:0}</style></head><body>${svg}</body></html>`);
+  `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/templates/FashionEcommerce/dist/styles.css"><style>html,body{margin:0;padding:0}</style></head><body>${svg}</body></html>`);
 console.log("Wrote images/template-poster.svg and _poster.html");
