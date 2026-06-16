@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Update this URL to your real domain once deployed.
-Sitemap: https://your-domain.example/sitemap.xml

@@ -12,14 +12,17 @@
         <ul class="nav-links" id="navLinks">
             {% for item in site.data.nav %}
             {% assign active = false %}
-            {% if item.url == "/" %}
-                {% if page.url == "/" %}{% assign active = true %}{% endif %}
-            {% else %}
-                {% if page.url contains item.url %}{% assign active = true %}{% endif %}
-            {% endif %}
+            {% unless item.external %}
+                {% if item.url == "/" %}
+                    {% if page.url == "/" %}{% assign active = true %}{% endif %}
+                {% else %}
+                    {% if page.url contains item.url %}{% assign active = true %}{% endif %}
+                {% endif %}
+            {% endunless %}
             <li>
                 <a href="{{ item.url }}"
-                   class="nav-link{% if item.cta %} nav-cta{% endif %}{% if active %} active{% endif %}">{{ item.title }}</a>
+                   class="nav-link{% if item.cta %} nav-cta{% endif %}{% if active %} active{% endif %}"
+                   {% if item.external %}target="_blank" rel="noopener"{% endif %}>{{ item.title }}{% if item.external %} &#8599;{% endif %}</a>
             </li>
             {% endfor %}
             <li>

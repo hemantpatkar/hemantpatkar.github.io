@@ -2,16 +2,12 @@ title: Hemant Patkar
 tagline: Solution Architect & Full Stack Developer
 description: >-
   Hemant Patkar — Solution Architect and Full Stack Developer with 13+ years
-  building .NET Core, cloud-native, and microservices applications. Consulting,
-  custom software development, and the apps I'm building.
+  building .NET Core, cloud-native, and microservices applications. Consulting
+  and custom software development.
 url: "https://hemantpatkar.github.io"
 baseurl: ""
 github_username: hemantpatkar
 lang: en
-
-# Android APK downloads are hosted as GitHub Release assets in this repo.
-# The /releases/latest/download/ path always serves the newest release.
-android_release_base: "https://github.com/theaiarc/Android/releases/latest/download"
 
 encoding: UTF-8
 
@@ -43,19 +39,6 @@ defaults:
       type: posts
     values:
       layout: post
-  - scope:
-      path: ""
-      type: templates
-    values:
-      layout: template
-
-collections:
-  apps:
-    output: true
-    permalink: /apps/:path/
-  templates:
-    output: true
-    permalink: /templates/:path/
 
 # Pretty URLs for blog posts.
 permalink: /blog/:year/:month/:title/

@@ -5,12 +5,9 @@
   url: /about/
 - title: Services
   url: /services/
-- title: Apps
-  url: /apps/
-- title: Templates
-  url: /templates/
-- title: Download
-  url: /download/
+- title: Apps & Templates
+  url: https://freeappsolutions.com/
+  external: true
 - title: Blog
   url: /blog/
 - title: Contact

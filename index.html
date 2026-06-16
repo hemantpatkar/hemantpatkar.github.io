@@ -79,31 +79,15 @@ description: >-
     </div>
 </section>
 
-<!-- ============================== Featured apps ============================== -->
+<!-- ============================== Products teaser ============================== -->
 <section class="section section-alt">
     <div class="container">
         <div class="section-head reveal">
-            <h2 class="section-title">Apps I&rsquo;m building</h2>
-            <p class="section-sub">Products crafted with the same care I bring to client work.</p>
-        </div>
-        {% assign featured_apps = site.apps | where: "featured", true | sort: "order" %}
-        <div class="card-grid">
-            {% for app in featured_apps %}
-            <a class="app-card reveal" href="{{ app.url }}">
-                <span class="app-icon" style="background: {{ app.accent | default: '#3b5bdb' }}">
-                    <i class="fa-solid {{ app.icon | default: 'fa-rocket' }}"></i>
-                </span>
-                <div class="app-card-body">
-                    <h3>{{ app.name | default: app.title }}
-                        {% if app.status %}<span class="badge-status status-{{ app.status }}">{{ app.status | replace: '-', ' ' }}</span>{% endif %}
-                    </h3>
-                    <p>{{ app.tagline }}</p>
-                </div>
-            </a>
-            {% endfor %}
+            <h2 class="section-title">Apps &amp; templates</h2>
+            <p class="section-sub">I also build my own apps and ready-to-use website templates — across e-commerce, healthcare, real estate, and more — available on my products site.</p>
         </div>
         <div class="section-foot reveal">
-            <a class="link-arrow" href="/apps/">Explore all apps <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn-primary" href="https://freeappsolutions.com/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Free App Solutions</a>
         </div>
     </div>
 </section>
