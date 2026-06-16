@@ -5,7 +5,7 @@ domain: Tours & Travel
 tagline: A vibrant template for travel agencies and tour operators, with packages and booking sections.
 price: "$XX"
 image: /assets/img/template-placeholder.svg
-demo_url: "#"
+demo_url: "/templates/ToursAndTravels/"
 buy_url: "#"
 order: 4
 features:

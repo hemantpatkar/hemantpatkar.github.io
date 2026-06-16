@@ -5,7 +5,7 @@ domain: Beauty Salon
 tagline: A polished template for salons and spas, with services, pricing, and appointment sections.
 price: "$XX"
 image: /assets/img/template-placeholder.svg
-demo_url: "#"
+demo_url: "/templates/BlushBeautySalon/"
 buy_url: "#"
 order: 7
 features:

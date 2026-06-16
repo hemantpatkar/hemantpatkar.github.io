@@ -5,7 +5,7 @@ domain: Fashion
 tagline: A stylish fashion e-commerce template with collections, product pages, and a cart-ready layout.
 price: "$XX"
 image: /assets/img/template-placeholder.svg
-demo_url: "#"
+demo_url: "/templates/FashionEcommerce/"
 buy_url: "#"
 order: 6
 features:

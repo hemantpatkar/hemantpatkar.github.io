@@ -5,7 +5,7 @@ domain: Home Decor
 tagline: An elegant template for home decor and interior brands, with product galleries and lookbooks.
 price: "$XX"
 image: /assets/img/template-placeholder.svg
-demo_url: "#"
+demo_url: "/templates/Homedecor/"
 buy_url: "#"
 order: 5
 features:
