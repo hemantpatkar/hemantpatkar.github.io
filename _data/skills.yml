@@ -1,7 +1,9 @@
 - name: "C# / .NET Core / MVC / OOPS"
   level: 89
+- name: "AI / LLM — Azure OpenAI, RAG, Agents"
+  level: 80
 - name: "Google Cloud / Azure Cloud"
-  level: 40
+  level: 78
 - name: "Angular"
   level: 50
 - name: "Okta SSO / OIDC"

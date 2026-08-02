@@ -5,12 +5,14 @@ email: hemantpatkar.hsp@gmail.com
 phone: "+918082109966"
 location: Mumbai 421301
 objective: >-
-  Full-stack developer with 13+ years building enterprise software across e-commerce,
-  ERP, and talent management — from microservices and enterprise SSO to cloud-native
-  apps on Azure and Google Cloud. I turn complex requirements into reliable,
-  well-architected systems in .NET Core, C#, and Angular, and I bring the same craft to
-  the products I build myself. I care about clean architecture, pragmatic delivery, and
-  software that holds up in production.
+  Solution architect and full-stack developer with 13+ years building enterprise software
+  across e-commerce, ERP, and talent management — from microservices and enterprise SSO to
+  cloud-native apps on Azure and Google Cloud. Today I focus on putting AI into production:
+  retrieval-augmented generation over internal documents, agentic workflows, and Azure OpenAI
+  wired into .NET services with the guardrails a regulated domain demands. I turn complex
+  requirements into reliable, well-architected systems in .NET Core, C#, and Angular, and I
+  bring the same craft to the products I build myself. I care about clean architecture,
+  pragmatic delivery, and software that holds up in production.
 socials:
   - name: GitHub
     icon: fa-github

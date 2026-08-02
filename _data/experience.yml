@@ -3,7 +3,10 @@
   period: March 2025 - Present
   points:
     - Own end-to-end solution architecture for a fund-accounting client, designing scalable systems on Microsoft .NET and Azure.
-    - Define technical direction, cloud architecture, and engineering standards across the .NET and Azure stack.
+    - Architect AI/LLM capabilities on Azure OpenAI, integrating models into existing .NET services through Semantic Kernel orchestration and reusable prompt layers.
+    - Build retrieval-augmented generation over internal documents — embeddings, vector search, and grounded extraction that keeps every answer traceable to its source.
+    - Design agentic workflows that automate multi-step internal processes with tool calling and human-in-the-loop review.
+    - Define technical direction and AI architecture standards — evaluation, guardrails, token and cost control, and data-privacy posture for a regulated finance domain.
     - Partner with stakeholders and delivery teams to align architecture with business goals and timelines.
 - company: Encora
   role: Technical Lead
